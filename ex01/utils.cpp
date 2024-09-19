@@ -1,20 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook.cpp                                      :+:      :+:    :+:   */
+/*   utils.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mehmyilm <mehmyilm@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/19 00:01:41 by mehmyilm          #+#    #+#             */
-/*   Updated: 2024/09/19 23:38:17 by mehmyilm         ###   ########.fr       */
+/*   Created: 2024/09/19 23:38:50 by mehmyilm          #+#    #+#             */
+/*   Updated: 2024/09/19 23:42:09 by mehmyilm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Contact.hpp"
+#include <iostream>
 
-class PhoneBook
+std::string ft_strtrim(std::string src)
 {
-	private:
-	Contact person[8];
-
-};
+	std:: string dest;
+	
+}
