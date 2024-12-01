@@ -3,61 +3,54 @@
 /*                                                        :::      ::::::::   */
 /*   Contact.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mehmyilm <mehmyilm@student.42istanbul.c    +#+  +:+       +#+        */
+/*   By: mehmyilm <mehmyilm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/19 22:16:06 by mehmyilm          #+#    #+#             */
-/*   Updated: 2024/09/19 22:27:15 by mehmyilm         ###   ########.fr       */
+/*   Created: 2024/12/01 14:14:11 by mehmyilm          #+#    #+#             */
+/*   Updated: 2024/12/01 15:50:07 by mehmyilm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Contact.hpp"
 
-std::string Contact::ft_get_name()const
+std::string Contact::getName()
 {
-	return (this->Name);
+	return(Contact::name);
+}
+std::string Contact::getSurName()
+{
+	return(Contact::surName);
+}
+std::string Contact::getNickName()
+{
+	return(Contact::nickName);
+}
+std::string Contact::getTelNum()
+{
+	return(Contact::telNum);
+}
+std::string Contact::getScret()
+{
+	return(Contact::darkScret);
+}
+void Contact::setName(std::string name)
+{
+	this->name = name;
+}
+void Contact::setSurName(std::string surName)
+{
+	this->surName = surName;
+}
+void Contact::setNickName(std::string nickName)
+{
+	this->nickName = nickName;
+}
+void Contact::setTelNum(std::string telNum)
+{
+	this->telNum = telNum;
+}
+void Contact::setScret(std::string darkScret)
+{
+	this->darkScret = darkScret;
 }
 
-std::string Contact::ft_get_surName()const
-{
-	return (this->SurName);
-}
 
-std::string Contact::ft_get_nickName()const
-{
-	return (this->NickName);
-}
-
-std::string Contact::ft_get_darkSecret()const
-{
-	return (this->DarkSecret);
-}
-
-int Contact::ft_get_telNo()const
-{
-	return (this->TelNo);
-}
-
-void Contact::ft_set_name(std::string name)
-{
-	this->Name = name;
-}
-
-void Contact::ft_set_surName(std::string surName)
-{
-	this->SurName = surName;
-}
-
-void Contact::ft_set_nickName(std::string nickName)
-{
-	this->NickName = nickName;
-}
-
-void Contact::ft_set_darkSecret(std::string darkSecret)
-{
-	this->DarkSecret = darkSecret;
-}
-
-void Contact::ft_set_telNo(int telNo)
-{
-	this->TelNo = telNo;
-}

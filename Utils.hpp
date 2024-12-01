@@ -1,31 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Main.cpp                                           :+:      :+:    :+:   */
+/*   Utils.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mehmyilm <mehmyilm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/01 14:29:49 by mehmyilm          #+#    #+#             */
-/*   Updated: 2024/12/01 18:43:01 by mehmyilm         ###   ########.fr       */
+/*   Created: 2024/12/01 19:40:44 by mehmyilm          #+#    #+#             */
+/*   Updated: 2024/12/01 20:31:36 by mehmyilm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "PhoneBook.hpp"
+#ifndef UTILS_H
+#define UTILS_H
+#include <iostream>
 
-int main()
+class Utils
 {
-	std::string command;
-	PhoneBook phnBook;
-	while (true)
-	{
-		std::cout<<"Enter command: ";
-		std::cin>>command;
+	public:
+		std::string Utils::addBook(std::string quest);
+		bool checkChar(std::string str, char c);
+};
 
-		if (command == "EXIT")
-			phnBook.exit();
-		else if (command == "ADD")
-			phnBook.add();
-		else if (command == "SEARCH")
-			phnBook.search();
-	}
-}
+#endif

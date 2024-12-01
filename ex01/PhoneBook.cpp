@@ -3,18 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   PhoneBook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mehmyilm <mehmyilm@student.42istanbul.c    +#+  +:+       +#+        */
+/*   By: mehmyilm <mehmyilm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/19 00:01:41 by mehmyilm          #+#    #+#             */
-/*   Updated: 2024/09/19 23:38:17 by mehmyilm         ###   ########.fr       */
+/*   Created: 2024/12/01 15:50:12 by mehmyilm          #+#    #+#             */
+/*   Updated: 2024/12/01 20:33:43 by mehmyilm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Contact.hpp"
+#include "PhoneBook.hpp"
 
-class PhoneBook
+void PhoneBook:: add()
 {
-	private:
-	Contact person[8];
+	static int i = 0;
 
-};
+	person[i].setName(Utils::addBook("Name: "));
+
+
+}
