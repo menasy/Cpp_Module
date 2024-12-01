@@ -1,29 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
+/*   Utils.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mehmyilm <mehmyilm@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/01 12:23:39 by mehmyilm          #+#    #+#             */
-/*   Updated: 2024/12/02 00:27:49 by mehmyilm         ###   ########.fr       */
+/*   Created: 2024/12/01 19:40:44 by mehmyilm          #+#    #+#             */
+/*   Updated: 2024/12/02 00:38:11 by mehmyilm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_HPP
-#define PHONEBOOK_HPP
+#ifndef UTILS_H
+#define UTILS_H
+#include <iostream>
+#include <cstdlib>
 
-#include "Contact.hpp"
-#include "Utils.hpp"
 
-class PhoneBook
+class Utils
 {
-	private:
-		Contact person[8];
 	public:
-		void add();
-		// void search();
-		// void exit();
-
+		static std::string addBook(std::string quest);
+		static bool checkChar(std::string &str, char c);
 };
+
 #endif
