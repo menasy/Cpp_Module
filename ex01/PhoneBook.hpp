@@ -6,15 +6,17 @@
 /*   By: mehmyilm <mehmyilm@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/01 12:23:39 by mehmyilm          #+#    #+#             */
-/*   Updated: 2024/12/03 15:18:58 by mehmyilm         ###   ########.fr       */
+/*   Updated: 2024/12/03 16:59:51 by mehmyilm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PHONEBOOK_HPP
 #define PHONEBOOK_HPP
 
-#include "Contact.hpp"
+#include <iostream>
+#include <cstdlib>
 #include "Utils.hpp"
+#include "Contact.hpp"
 
 #define IGNORE_MAX 10000000
 
