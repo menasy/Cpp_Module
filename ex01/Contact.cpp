@@ -6,7 +6,7 @@
 /*   By: mehmyilm <mehmyilm@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/01 14:14:11 by mehmyilm          #+#    #+#             */
-/*   Updated: 2024/12/02 00:18:51 by mehmyilm         ###   ########.fr       */
+/*   Updated: 2024/12/03 15:23:49 by mehmyilm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,6 @@ std::string Contact::getScret()
 }
 void Contact::setName(std::string name)
 {
-	std::cout<<"name__: "<<name<<std::endl;
 	this->name = name;
 }
 void Contact::setSurName(std::string surName)
@@ -53,5 +52,3 @@ void Contact::setScret(std::string darkScret)
 {
 	this->darkScret = darkScret;
 }
-
-
