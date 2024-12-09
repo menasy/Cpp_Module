@@ -1,32 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mehmyilm <mehmyilm@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/18 22:20:37 by mehmyilm          #+#    #+#             */
-/*   Updated: 2024/09/18 22:52:31 by mehmyilm         ###   ########.fr       */
+/*   Created: 2024/12/01 15:50:12 by mehmyilm          #+#    #+#             */
+/*   Updated: 2024/12/08 15:28:50 by mehmyilm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
+#include "Zombie.hpp"
 
-int main(int argc, char **argv)
+Zombie*	newZombie(std::string name);
+void	randomChump(std::string name);
+
+int	main()
 {
-	int	i;
-	int j;
+	std::cout<<">>>>>>>> Zombie in stack <<<<<<<<"<<std::endl;
+	randomChump("zMert");
+	std::cout<<">>>>>>>> Zombie in heap <<<<<<<<<"<<std::endl;
+	Zombie	*dzeko = newZombie("Dzeko");
+	dzeko->announce();
 
-	i = 0;
-	if (argc > 1)
-	{
-		while (argv[++i])
-		{
-			j = -1;
-			while (argv[i][++j])
-				std::cout << (char)std::toupper(argv[i][j]);
-		}
-	}
-	else
-		std::cout << "LOUD AND UNBEARABLE FEEDBACK NOISE";
+	delete dzeko;
+	return (0);
 }
