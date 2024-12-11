@@ -1,24 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Harl.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mehmyilm <mehmyilm@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/01 15:50:12 by mehmyilm          #+#    #+#             */
-/*   Updated: 2024/12/11 22:27:51 by mehmyilm         ###   ########.fr       */
+/*   Updated: 2024/12/11 23:10:29 by mehmyilm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Harl.hpp"
+#ifndef HARL_H
+#define HARL_H
 
-int main()
+#include <iostream>
+
+class Harl
 {
-	Harl harl1;
-	void (Harl::*ptrCoomp)(std::string) = &Harl::complain;
+	private:
+		std::	string compLevels[4];
+		
+		void	debug( void );
+		void	info( void );
+		void	warning( void );
+		void	error( void );
+		void	showComplain(int &check);
+		void	setLevels();
+	public:
+		void complain( std::string level );
+};
 
-	(harl1.*ptrCoomp)("DEBUG");
-	(harl1.*ptrCoomp)("INFO");
-	(harl1.*ptrCoomp)("WARNING");
-	(harl1.*ptrCoomp)("ERROR");
-}
+#endif
