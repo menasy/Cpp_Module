@@ -6,23 +6,29 @@
 /*   By: mehmyilm <mehmyilm@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/01 15:50:12 by mehmyilm          #+#    #+#             */
-/*   Updated: 2024/12/11 23:47:46 by mehmyilm         ###   ########.fr       */
+/*   Updated: 2024/12/16 01:37:52 by mehmyilm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "Fixed.hpp"
 
-Zombie*	newZombie(std::string name);
-void	randomChump(std::string name);
-
-int	main()
+int main( void )
 {
-	std::cout<<">>>>>>>> Zombie in stack <<<<<<<<"<<std::endl;
-	randomChump("zMert");
-	std::cout<<">>>>>>>> Zombie in heap <<<<<<<<<"<<std::endl;
-	Zombie	*zSamet = newZombie("zSamet");
-	zSamet->announce();
+	Fixed a;
+	Fixed const b( 10 );
+	Fixed const c( 42.42f );
+	Fixed const d( b );
 
-	delete zSamet;
-	return (0);
+	a = Fixed( 1234.4321f );
+
+	std::cout << "a is " << a << std::endl;
+	std::cout << "b is " << b << std::endl;
+	std::cout << "c is " << c << std::endl;
+	std::cout << "d is " << d << std::endl;
+
+	std::cout << "a is " << a.toInt() << " as integer" << std::endl;
+	std::cout << "b is " << b.toInt() << " as integer" << std::endl;
+	std::cout << "c is " << c.toInt() << " as integer" << std::endl;
+	std::cout << "d is " << d.toInt() << " as integer" << std::endl;
+	return 0;
 }
