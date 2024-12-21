@@ -1,5 +1,5 @@
 NAME = FragTrap
-SRC = main.cpp ClapTrap.cpp FragTrap.cpp ScavTrap.cpp
+SRC = main.cpp ClapTrap.cpp FragTrap.cpp
 
 OBJS = $(SRC:.cpp=.o)
 CC = c++
