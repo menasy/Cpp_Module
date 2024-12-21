@@ -6,7 +6,7 @@
 /*   By: menasy <menasy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/01 15:50:12 by mehmyilm          #+#    #+#             */
-/*   Updated: 2024/12/21 20:16:41 by menasy           ###   ########.fr       */
+/*   Updated: 2024/12/21 20:21:25 by menasy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,7 +78,7 @@ void ClapTrap::attack(const std::string& target)
     }
     else
         std::cout << "ClapTrap " << this->name << " can't attack!" << std::endl;
-    this->showInfos();
+    this->showInfos("ClapTrap");
    
 }
 
@@ -97,7 +97,7 @@ void ClapTrap::takeDamage(unsigned int amount)
             std::cout << "ClapTrap " << this->name << " is unconscious." << std::endl;
             this->hitPoints = 0;
         }
-        this->showInfos();
+        this->showInfos("ClapTrap");
     }
 }
 
@@ -112,14 +112,15 @@ void ClapTrap::beRepaired(unsigned int amount)
     }
     else
         std::cout << "ClapTrap " << this->name << " can't repair itself." << std::endl;
-    this->showInfos();
+    this->showInfos("ClapTrap");
 
 }
-void ClapTrap::showInfos() {
-    std::cout << "\033[32mClapTrap " << this->getName() 
+void ClapTrap::showInfos(std::string className) { 
+    std::cout << "\033[32m" << className << " " << this->getName() 
               << " Hit Points ( " << this->getHitPoints() << " )"
               << " Energy Points ( " << this->getEnergyPoints() << " )\033[0m" 
-              << std::endl << std::endl;
+              << std::endl << std::endl; 
 }
+
 
 
