@@ -6,7 +6,7 @@
 /*   By: menasy <menasy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/01 15:50:12 by mehmyilm          #+#    #+#             */
-/*   Updated: 2024/12/21 15:56:37 by menasy           ###   ########.fr       */
+/*   Updated: 2024/12/21 15:55:58 by menasy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,7 @@ void ClapTrap::attack(const std::string& target)
          std::cout<<"ClapTrap "<< this->name << " attacks " << target 
             << " causing " << this->attackDamage << " points of damage!" << std::endl;
         this->energyPoints--;
-        this->showInfos();
+        this->showInfos("ClapTrap");
     }
     else
         std::cout << "ClapTrap " << this->name << " can't attack!" << std::endl;
@@ -97,7 +97,7 @@ void ClapTrap::takeDamage(unsigned int amount)
             std::cout << "ClapTrap " << this->name << " is unconscious." << std::endl;
             this->hitPoints = 0;
         }
-        this->showInfos();
+        this->showInfos("ClapTrap");
     }
 }
 
@@ -109,17 +109,18 @@ void ClapTrap::beRepaired(unsigned int amount)
                 << amount << " hit points!" << std::endl;
         this->hitPoints += amount;
         this->energyPoints--;
-        this->showInfos();
+        this->showInfos("ClapTrap");
     }
     else
         std::cout << "ClapTrap " << this->name << " can't repair itself." << std::endl;
 
 }
-void ClapTrap::showInfos() {
-    std::cout << "\033[32mClapTrap " << this->getName() 
+void ClapTrap::showInfos(std::string className) { 
+    std::cout << "\033[32m" << className << " " << this->getName() 
               << " Hit Points ( " << this->getHitPoints() << " )"
               << " Energy Points ( " << this->getEnergyPoints() << " )\033[0m" 
-              << std::endl << std::endl;
+              << std::endl << std::endl; 
 }
+
 
 
