@@ -6,7 +6,7 @@
 /*   By: menasy <menasy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/01 15:50:12 by mehmyilm          #+#    #+#             */
-/*   Updated: 2024/12/21 15:28:13 by menasy           ###   ########.fr       */
+/*   Updated: 2024/12/22 23:27:13 by menasy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class ClapTrap
     public:
         ClapTrap();
         ~ClapTrap();
-        ClapTrap(std::string name);
+        ClapTrap(std::string newName);
         ClapTrap(const ClapTrap& object);
         ClapTrap& operator=(const ClapTrap& object);
         

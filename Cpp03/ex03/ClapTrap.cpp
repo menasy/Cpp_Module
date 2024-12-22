@@ -6,7 +6,7 @@
 /*   By: menasy <menasy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/01 15:50:12 by mehmyilm          #+#    #+#             */
-/*   Updated: 2024/12/21 20:21:25 by menasy           ###   ########.fr       */
+/*   Updated: 2024/12/22 23:26:25 by menasy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,10 @@ ClapTrap::~ClapTrap()
     std::cout<<"ClapTrap Destructor Called"<<std::endl; 
 }
 
-ClapTrap::ClapTrap(std::string name)
+ClapTrap::ClapTrap(std::string newName)
 {
     std::cout<<"ClapTrap Name Constructor Called"<<std::endl;
-    this->name = name;
+    this->name = newName;
     this->hitPoints = 10;
     this->energyPoints = 10;
     this->attackDamage = 0;

@@ -6,7 +6,7 @@
 /*   By: menasy <menasy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/01 15:50:12 by mehmyilm          #+#    #+#             */
-/*   Updated: 2024/12/21 21:30:37 by menasy           ###   ########.fr       */
+/*   Updated: 2024/12/23 00:20:44 by menasy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ DiamondTrap::DiamondTrap()
 {
     std::cout<<"DiamondTrap Default Constructor Called"<<std::endl;
     this->hitPoints = 100;
-    this->energyPoints = 100;
+    this->energyPoints = 50;
     this->attackDamage = 30;   
 }
 
@@ -26,16 +26,17 @@ DiamondTrap::~DiamondTrap()
         
 }
 
-DiamondTrap::DiamondTrap(std::string name) : ClapTrap::ClapTrap(name)
+DiamondTrap::DiamondTrap(std::string newName) : ClapTrap::ClapTrap(newName + "_clap_name")
 {
     std::cout<<"DiamondTrap Name Constructor Called"<<std::endl;
-    this->name = name;
+    this->name = newName;
     this->hitPoints = 100;
-    this->energyPoints = 100;
+    this->energyPoints = 50;
     this->attackDamage = 30;   
 }
 
-DiamondTrap::DiamondTrap(const DiamondTrap& object) : ClapTrap(object)
+DiamondTrap::DiamondTrap(const DiamondTrap& object) 
+            : ClapTrap(object), FragTrap(object), ScavTrap(object) 
 {
    std::cout<<"DiamondTrap Copy Constructor Called"<<std::endl;
     *this = object;     
@@ -55,13 +56,11 @@ DiamondTrap& DiamondTrap::operator=(const DiamondTrap& object)
 
 void DiamondTrap::attack(const std::string& target)
 {
-	    if (this->energyPoints != 0 && this->hitPoints != 0)
-    {
-         std::cout<<"DiamondTrap "<< this->name << " attacks " << target 
-            << " causing " << this->attackDamage << " points of damage!" << std::endl;
-        this->energyPoints--;
-    }
-    else
-        std::cout << "DiamondTrap " << this->name << " can't attack!" << std::endl;
-    this->showInfos("DiamondTrap");
+    ScavTrap::attack(target);
+}
+
+void DiamondTrap::whoAmI()
+{
+    std::cout<<"DiamondTrap Name: " << this->name <<std::endl;
+    std::cout<<"ClapTrap Name: " << ClapTrap::name <<std::endl << std::endl;
 }
