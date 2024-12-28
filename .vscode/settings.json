@@ -104,5 +104,8 @@
     "stdexcept": "cpp",
     "streambuf": "cpp",
     "typeinfo": "cpp"
-  }
+  },
+  "42header.email": "menasy@student.42.fr",
+  "42header.username": "menasy",
+  "editor.insertSpaces": false
 }
