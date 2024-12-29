@@ -6,7 +6,7 @@
 /*   By: menasy <menasy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/01 15:50:12 by mehmyilm          #+#    #+#             */
-/*   Updated: 2024/12/29 00:22:28 by menasy           ###   ########.fr       */
+/*   Updated: 2024/12/29 18:05:36 by menasy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,10 @@
 class Character : public ICharacter
 {
 	private:
-	std::string name;
-	AMateria **inventory;
+		std::string name;
+		AMateria 	**inventory;
+		void		deleteInventory();
+		void   		initInventory();
 	public:
 	    Character();
         Character(std::string name);
@@ -33,6 +35,8 @@ class Character : public ICharacter
     	void equip(AMateria* m);
     	void unequip(int idx);
     	void use(int idx, ICharacter& target);
+
+
 	
 };
 #endif

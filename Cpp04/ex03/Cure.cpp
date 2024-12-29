@@ -6,7 +6,7 @@
 /*   By: menasy <menasy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/01 15:50:12 by mehmyilm          #+#    #+#             */
-/*   Updated: 2024/12/28 23:41:47 by menasy           ###   ########.fr       */
+/*   Updated: 2024/12/29 21:18:10 by menasy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,14 +32,17 @@ Cure::Cure(const Cure& obj) : AMateria(obj)
 Cure& Cure::operator=(const Cure& obj)
 {
     std::cout<< "Cure Copy Assigment" << std::endl;
+    if (this == &obj)
+        return (*this);
+    *this = obj;
     return (*this);
 }
 
 //      AMateria
 
-Cure:: AMateria* clone()
+AMateria* Cure::clone() const
 {
-     AMateria *obj = new Cure;
+    AMateria *obj = new Cure;
 	return(obj);
 }
 

@@ -6,7 +6,7 @@
 /*   By: menasy <menasy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/01 15:50:12 by mehmyilm          #+#    #+#             */
-/*   Updated: 2024/12/28 23:42:05 by menasy           ###   ########.fr       */
+/*   Updated: 2024/12/29 21:11:08 by menasy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,6 @@ class Cure : public AMateria
         Cure& operator=(const Cure& obj);
 
 		AMateria* clone() const;
-        void use(ICharacter& target);
-        
+        void use(ICharacter& target);        
 };
-
 #endif

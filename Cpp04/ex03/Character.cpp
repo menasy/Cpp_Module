@@ -6,7 +6,7 @@
 /*   By: menasy <menasy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/01 15:50:12 by mehmyilm          #+#    #+#             */
-/*   Updated: 2024/12/29 00:24:35 by menasy           ###   ########.fr       */
+/*   Updated: 2024/12/29 21:18:14 by menasy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,26 +15,19 @@
 Character::Character()
 {
     std::cout<< "Character Default Constructor" << std::endl;
-	this->inventory = new AMateria*[4];
-    for (int i = 0; i < 4; i++)
-        this->inventory[i] = NULL;
+    this->initInventory();
 }
 Character::Character(std::string name)
 {
     std::cout<< "Character Name Constructor" << std::endl;
     this->name = name;
-    for (int i = 0; i < 4; i++)
-        this->inventory[i] = NULL;
+    this->initInventory();
 }
 
 Character::~Character() 
 {
     std::cout<< "Character Destructor" << std::endl;
-	for (int i = 0; i < 4; i++)
-	{
-        delete this->inventory[i];
-		this->inventory[i] = NULL;
-	}
+    this->deleteInventory();
 	delete[] this->inventory;
 }
 
@@ -50,6 +43,9 @@ Character& Character::operator=(const Character& obj)
     if (this == &obj)
         return(*this);
     this->name = obj.name;
+    this->deleteInventory();
+    for (int i = 0; i < 4; i++)
+        this->inventory[i] = obj.inventory[i]->clone();
     return (*this);
 }
 
@@ -65,7 +61,7 @@ void Character::equip(AMateria* m)
         if (this->inventory[i] == NULL)
         {
             this->inventory[i] = m->clone();
-            break;
+            return;
         }
     }
 }
@@ -82,4 +78,19 @@ void Character::use(int idx, ICharacter& target)
     if (idx < 0 || idx > 3 || this->inventory[idx] == NULL)
 		return ;
 	this->inventory[idx]->use(target);
+}
+void   Character::deleteInventory()
+{
+    for (int i = 0; i < 4; i++)
+	{
+        delete this->inventory[i];
+		this->inventory[i] = NULL;
+	}
+}
+
+void   Character::initInventory()
+{      
+    this->inventory = new AMateria*[4];
+    for (int i = 0; i < 4; i++)
+         this->inventory[i] = NULL;
 }

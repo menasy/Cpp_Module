@@ -6,7 +6,7 @@
 /*   By: menasy <menasy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/01 15:50:12 by mehmyilm          #+#    #+#             */
-/*   Updated: 2024/12/28 23:37:48 by menasy           ###   ########.fr       */
+/*   Updated: 2024/12/29 21:18:05 by menasy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,12 +32,15 @@ Ice::Ice(const Ice& obj) : AMateria(obj)
 Ice& Ice::operator=(const Ice& obj)
 {
     std::cout<< "Ice Copy Assigment" << std::endl;
+    if (this == &obj)
+        return (*this);
+    *this = obj;
     return (*this);
 }
 
 //          Amateria
 
-Ice:: AMateria* clone() 
+AMateria* Ice::clone() const
 {
     AMateria *obj = new Ice;
 	return(obj);

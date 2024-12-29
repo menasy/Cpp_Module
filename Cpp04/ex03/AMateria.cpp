@@ -14,19 +14,18 @@
 
 AMateria::AMateria()
 {
-
+    std::cout << "AMateria Default Constructor" << std::endl;
 }
 
 AMateria::AMateria(std::string const &type)
 {
-    std::cout << "AMateria Constructor" << std::endl;
+    std::cout << "AMateria Type Constructor" << std::endl;
     this->type = type;
 }
 
 AMateria:: ~AMateria()
 {
     std::cout << "AMateria Destructor" << std::endl;
-
 }
 
 AMateria::AMateria(AMateria const &obj)
@@ -49,5 +48,5 @@ std::string const& AMateria::getType() const
 
 void AMateria::use(ICharacter& target)
 {
-    std::cout << "Base Use Method" << std::endl;
+    std::cout << "AMateria Use Method: " << target.getName() << std::endl;
 }
