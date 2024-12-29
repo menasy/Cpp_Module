@@ -6,7 +6,7 @@
 /*   By: menasy <menasy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/01 15:50:12 by mehmyilm          #+#    #+#             */
-/*   Updated: 2024/12/29 18:05:36 by menasy           ###   ########.fr       */
+/*   Updated: 2024/12/29 22:57:15 by menasy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ class Character : public ICharacter
 		AMateria 	**inventory;
 		void		deleteInventory();
 		void   		initInventory();
+		AMateria	*tmp[4];
 	public:
 	    Character();
         Character(std::string name);

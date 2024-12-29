@@ -6,7 +6,7 @@
 /*   By: menasy <menasy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/01 15:50:12 by mehmyilm          #+#    #+#             */
-/*   Updated: 2024/12/29 21:18:10 by menasy           ###   ########.fr       */
+/*   Updated: 2024/12/29 21:29:31 by menasy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,24 +14,18 @@
 
 Cure::Cure()
 {
-    std::cout<< "Cure Default Constructor" << std::endl;
     this->type = "cure";
 }
 
-Cure::~Cure() 
-{
-    std::cout<< "Cure Destructor" << std::endl;
-}
+Cure::~Cure() {}
 
 Cure::Cure(const Cure& obj) : AMateria(obj)
 {
-    std::cout<< "Cure Copy Constructor" << std::endl;
     *this = obj;
 }
 
 Cure& Cure::operator=(const Cure& obj)
 {
-    std::cout<< "Cure Copy Assigment" << std::endl;
     if (this == &obj)
         return (*this);
     *this = obj;
@@ -48,6 +42,6 @@ AMateria* Cure::clone() const
 
 void Cure::use(ICharacter& target)
 {
-    std::cout << "Cure: \"* heals " << target.getName() << "\'s wounds *\"" << std::endl;
+    std::cout << "Cure: * heals " << target.getName() << "\'s wounds *" << std::endl;
     
 }

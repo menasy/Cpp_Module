@@ -12,21 +12,14 @@
 
 #include "AMateria.hpp"
 
-AMateria::AMateria()
-{
-    std::cout << "AMateria Default Constructor" << std::endl;
-}
+AMateria::AMateria(){}
 
 AMateria::AMateria(std::string const &type)
 {
-    std::cout << "AMateria Type Constructor" << std::endl;
     this->type = type;
 }
 
-AMateria:: ~AMateria()
-{
-    std::cout << "AMateria Destructor" << std::endl;
-}
+AMateria:: ~AMateria(){}
 
 AMateria::AMateria(AMateria const &obj)
 {

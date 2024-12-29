@@ -6,7 +6,7 @@
 /*   By: menasy <menasy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/01 15:50:12 by mehmyilm          #+#    #+#             */
-/*   Updated: 2024/12/29 16:48:08 by menasy           ###   ########.fr       */
+/*   Updated: 2024/12/30 00:52:17 by menasy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,30 +14,31 @@
 
 MateriaSource::MateriaSource()
 {
-    std::cout << "MateriaSource Default Constructor" << std::endl;
 	this->initInventory();
 }
 
 MateriaSource::~MateriaSource()
 {
-    std::cout<< "MateriaSource Destructor" << std::endl;
 	this->deleteInventory();	
 }
 
 MateriaSource::MateriaSource(MateriaSource const &obj)
 {
-	std::cout<< "MateriaSource Copy Constructor" << std::endl;
     *this = obj;
 }
 
 MateriaSource& MateriaSource::operator=(MateriaSource const &obj)
 {
-	std::cout<< "MateriaSource Copy Assigment" << std::endl;
     if (this == &obj)
         return(*this);
     this->deleteInventory();
     for (int i = 0; i < 4; i++)
-        this->mInventory[i] = obj.mInventory[i]->clone();
+    {
+        if (obj.mInventory[i] != NULL)
+            this->mInventory[i] = obj.mInventory[i]->clone();
+        else
+            this->mInventory[i] = NULL;       
+    }
     return (*this);
 }
 
