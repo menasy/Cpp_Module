@@ -6,7 +6,7 @@
 /*   By: menasy <menasy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/01 15:50:12 by mehmyilm          #+#    #+#             */
-/*   Updated: 2024/12/25 23:25:15 by menasy           ###   ########.fr       */
+/*   Updated: 2024/12/30 14:58:28 by menasy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,13 +31,18 @@ Cat::Cat(const Cat& obj) : Animal(obj) , Brain(obj)
     *this = obj;
 }
 
-Cat& Cat::operator=(const Cat& obj)
+Cat& Cat::operator=(const Cat& obj) 
 {
-    std::cout << "Cat Copy Assigment" << std::endl;
-    if (this == &obj)
+    std::cout << "Cat Copy Assignment Operator" << std::endl;
+
+    if (this == &obj) 
         return (*this);
     this->type = obj.type;
-    return(*this);
+    delete this->brain;
+    this->brain = new Brain(*obj.brain); 
+    for (int i = 0; i < 100; i++)
+        this->ideas[i] = obj.ideas[i];
+    return (*this);
 }
 
 void    Cat::makeSound() const

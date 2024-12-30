@@ -6,7 +6,7 @@
 /*   By: menasy <menasy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/01 15:50:12 by mehmyilm          #+#    #+#             */
-/*   Updated: 2024/12/25 22:29:34 by menasy           ###   ########.fr       */
+/*   Updated: 2024/12/30 14:18:21 by menasy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,8 @@ Brain& Brain::operator=(const Brain& obj)
     std::cout << "Brain Copy Assigment" << std::endl;
     if (this == &obj)
         return (*this);
+    for (int i = 0; i < 100; i++)
+        this->ideas[i] = obj.ideas[i];
     return(*this);
 }
 
