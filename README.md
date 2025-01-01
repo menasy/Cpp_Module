@@ -95,12 +95,13 @@ Bu repository, 42 okulu kapsamında tamamladığım C++ modüllerini içermekted
     - **Upcasting:** Türetilmiş sınıf, temel sınıfa atanabilir.
     - **Ters Yönlü Atama:** Temel sınıf türetilmiş sınıfa atanamaz.
 
-![Inheritance Access](https://github.com/menasy/Project_icons/blob/main/Cpp_ModuleImages/InheritanceAccess.png)
-
 - **Kaynaklar:**
   - [JavatPoint - Çoklu Kalıtım](https://www.javatpoint.com/cpp-inheritance)
   - [GeeksforGeeks - Kalıtımda Constructor ve Destructor](https://www.geeksforgeeks.org/order-constructor-destructor-call-c/)
   - [LearnCPP - Virtual Inheritance](https://www.learncpp.com/cpp-tutorial/virtual-base-classes/)
+  - 
+![Inheritance Access](https://github.com/menasy/Project_icons/blob/main/Cpp_ModuleImages/InheritanceAccess.png)
+
 
 ---
 
@@ -119,12 +120,12 @@ Bu repository, 42 okulu kapsamında tamamladığım C++ modüllerini içermekted
   - **Interface ve Saf Soyut Sınıflar:**
     - C++ arayüzleri saf soyut sınıflarla yapılır ve yalnızca metotlar içerir, üye değişkenlere sahip olamaz.
 
-![Virtual Table](https://github.com/menasy/Project_icons/blob/main/Cpp_ModuleImages/VirtualTable.png)
-![Virtual Table 2](https://github.com/menasy/Project_icons/blob/main/Cpp_ModuleImages/VirtualTable2.png)
-
 - **Kaynaklar:**
   - [GeeksforGeeks - Polimorfizm ve Sanal Fonksiyonlar](https://www.geeksforgeeks.org/cpp-polymorphism/)
   - [LearnCPP - Abstract Classes](https://www.learncpp.com/cpp-tutorial/pure-virtual-functions-abstract-base-classes-and-interface-classes/)
+  - 
+![Virtual Table](https://github.com/menasy/Project_icons/blob/main/Cpp_ModuleImages/VirtualTable.png)
+![Virtual Table ](https://github.com/menasy/Project_icons/blob/main/Cpp_ModuleImages/VirtualTable2.png)
 
 ---
 
