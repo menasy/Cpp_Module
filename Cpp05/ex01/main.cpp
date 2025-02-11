@@ -6,12 +6,12 @@
 /*   By: menasy <menasy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/10 17:35:20 by mehmyilm          #+#    #+#             */
-/*   Updated: 2025/02/11 17:36:25 by menasy           ###   ########.fr       */
+/*   Updated: 2025/02/11 22:16:49 by menasy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Form.hpp"
 #include "Bureaucrat.hpp"
-
 void displayIncraseInfo(Bureaucrat& brc)
 {
 	std::cout << "Before Incrase: " << brc <<std::endl;
@@ -31,18 +31,11 @@ int main ()
 		//  Bureaucrat brcIrfan = Bureaucrat("İrfancan Kahveci",-1);
 		//  Bureaucrat brcSebo = Bureaucrat("Symanski",151);
 		Bureaucrat brcTadic = Bureaucrat("Dusan Tadic",10);
-		Bureaucrat brcNesyri = Bureaucrat("Yousuf En Nesyri",1);
-		Bureaucrat brcOsai = Bureaucrat("Osai Samuel",150);
 		Bureaucrat brcDzeko = Bureaucrat("Edin Dzeko",9);
+		Form f1 = Form("Form1", 17);
 		
-		displayIncraseInfo(brcTadic);
-		displayReductionInfo(brcTadic);
+		brcTadic.signForm(f1);
 		
-		displayReductionInfo(brcNesyri);
-		displayIncraseInfo(brcNesyri);
-
-		displayReductionInfo(brcOsai);
-
 	}catch(std::exception &e){
 		std::cout<<"Exception caught: " << e.what() << std::endl;
 	}

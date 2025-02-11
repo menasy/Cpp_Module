@@ -6,14 +6,17 @@
 /*   By: menasy <menasy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/10 12:48:27 by menasy            #+#    #+#             */
-/*   Updated: 2025/02/11 18:03:42 by menasy           ###   ########.fr       */
+/*   Updated: 2025/02/11 22:49:51 by menasy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef BUREAUCRAT_H
 # define BUREAUCRAT_H
 
-#include <iostream>
+# include <iostream>
+# include "Form.hpp"
+
+class Form;
 
 class Bureaucrat
 {
@@ -23,7 +26,7 @@ class Bureaucrat
         void setGrade(int& grade);
     public:
         Bureaucrat();
-        Bureaucrat(std::string name, int age);
+        Bureaucrat(std::string const name, int grade);
         ~Bureaucrat();
         Bureaucrat(const Bureaucrat& obj);
         Bureaucrat& operator=(const Bureaucrat& obj);
@@ -32,7 +35,9 @@ class Bureaucrat
        	const int&	getGrade() const;        
         const std::string&	getName() const;
 		void IncreaseGrade();      
-        void reductGrade();      
+        void reductGrade();   
+
+        void signForm(Form& form);   
         class GradeTooHighException : public std::exception{
             public:
                 char const* what() const throw();
