@@ -6,7 +6,7 @@
 /*   By: menasy <menasy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/10 16:55:24 by menasy            #+#    #+#             */
-/*   Updated: 2025/02/13 00:13:12 by menasy           ###   ########.fr       */
+/*   Updated: 2025/02/12 23:28:50 by menasy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,16 +82,26 @@ char const* Bureaucrat::GradeTooLowException::what() const throw()
 {
 	return ("Grade is too low! Must be at most 150.");
 }
-void Bureaucrat::signForm(Form& form)
+void Bureaucrat::signForm(AForm& form)
 {
-	try
-	{
+	try{
 		form.beSigned(*this);
 		std::cout << *this << " signed " << form << std::endl;
 	}
-	catch(const std::exception& e)
-	{
-		std::cout << *this << " couldn’t sign " << form << ", because " << e.what() << std::endl;
+	catch(const std::exception& e){
+		std::cout << *this << " couldn’t sign " << form << " because, " << e.what() << std::endl;
 	}
-	
+}
+
+void Bureaucrat::executeForm(AForm const & form) const
+{
+	try{
+		form.beExecute(*this);
+		std::cout << *this << " execute " << form << std::endl;
+	}
+	catch(const std::exception& e){
+		std::cout << *this << " couldn’t execute " << form << " because, " << e.what() << std::endl;
+		throw e;
+	}
 }   
+
