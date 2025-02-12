@@ -6,7 +6,7 @@
 /*   By: menasy <menasy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/10 17:35:20 by mehmyilm          #+#    #+#             */
-/*   Updated: 2025/02/11 22:16:49 by menasy           ###   ########.fr       */
+/*   Updated: 2025/02/12 13:11:57 by menasy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,13 +28,16 @@ void displayReductionInfo(Bureaucrat& brc)
 int main ()
 {
 	try{
-		//  Bureaucrat brcIrfan = Bureaucrat("İrfancan Kahveci",-1);
-		//  Bureaucrat brcSebo = Bureaucrat("Symanski",151);
+		
 		Bureaucrat brcTadic = Bureaucrat("Dusan Tadic",10);
 		Bureaucrat brcDzeko = Bureaucrat("Edin Dzeko",9);
-		Form f1 = Form("Form1", 17);
+
+		// Form f1 = Form("Form1",0);
+		// Form f2 = Form("Form2",155);
+		Form f3 = Form("Form3", 9);
 		
-		brcTadic.signForm(f1);
+		brcTadic.signForm(f3);
+		brcDzeko.signForm(f3);
 		
 	}catch(std::exception &e){
 		std::cout<<"Exception caught: " << e.what() << std::endl;

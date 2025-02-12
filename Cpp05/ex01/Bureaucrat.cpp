@@ -6,7 +6,7 @@
 /*   By: menasy <menasy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/10 16:55:24 by menasy            #+#    #+#             */
-/*   Updated: 2025/02/11 22:52:03 by menasy           ###   ########.fr       */
+/*   Updated: 2025/02/12 13:08:44 by menasy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,14 +84,12 @@ char const* Bureaucrat::GradeTooLowException::what() const throw()
 }
 void Bureaucrat::signForm(Form& form)
 {
-	try
-	{
+	try{
 		form.beSigned(*this);
 		std::cout << *this << " signed " << form << std::endl;
 	}
-	catch(const std::exception& e)
-	{
-		std::cout << this << " couldn’t sign " << form << "because" << e.what() << std::endl;
+	catch(const std::exception& e){
+		std::cout << *this << " couldn’t sign " << form << " because " << e.what() << std::endl;
 	}
 	
 }   
