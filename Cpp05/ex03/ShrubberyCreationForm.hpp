@@ -1,34 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   RobotomyRequestForm.hpp                            :+:      :+:    :+:   */
+/*   ShrubberyCreationForm.hpp                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: menasy <menasy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/10 12:48:27 by menasy            #+#    #+#             */
-/*   Updated: 2025/02/13 16:47:52 by menasy           ###   ########.fr       */
+/*   Updated: 2025/02/12 18:38:35 by menasy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef RobotomyRequestForm_H
-# define RobotomyRequestForm_H
+#ifndef ShrubberyCreationForm_H
+# define ShrubberyCreationForm_H
 
 # include <iostream>
-# include <cstdlib>
 # include "AForm.hpp"
-# include <ctime>
+# include <fstream>
 
-
-class RobotomyRequestForm : public AForm
+class ShrubberyCreationForm : public AForm
 {
     private:
         std::string target;
     public:
-        RobotomyRequestForm();
-        RobotomyRequestForm(std::string target);
-        virtual ~RobotomyRequestForm();
-        RobotomyRequestForm(const RobotomyRequestForm& obj);
-        RobotomyRequestForm& operator=(const RobotomyRequestForm& obj);
+        ShrubberyCreationForm();
+        ShrubberyCreationForm(std::string target);
+        virtual ~ShrubberyCreationForm();
+        ShrubberyCreationForm(const ShrubberyCreationForm& obj);
+        ShrubberyCreationForm& operator=(const ShrubberyCreationForm& obj);
         void executeHandler() const;     
 
     

@@ -6,7 +6,7 @@
 /*   By: menasy <menasy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/10 16:55:24 by menasy            #+#    #+#             */
-/*   Updated: 2025/02/13 16:46:10 by menasy           ###   ########.fr       */
+/*   Updated: 2025/02/13 16:45:38 by menasy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ RobotomyRequestForm& RobotomyRequestForm::operator=(const RobotomyRequestForm& o
 void RobotomyRequestForm::executeHandler() const
 {
     std::srand(std::time(0));
+    
     std::cout << "\033[1;33m* Drilling noises *\033[0m" << std::endl;
     if (std::rand() % 2 == 1)
         std::cout << "\033[1;33m" << this->target << " has been robotomized successfully (50% chance).\033[0m" << std::endl;
