@@ -6,7 +6,7 @@
 /*   By: menasy <menasy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/16 22:20:01 by menasy            #+#    #+#             */
-/*   Updated: 2025/02/16 23:13:44 by menasy           ###   ########.fr       */
+/*   Updated: 2025/02/17 22:59:00 by menasy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,8 @@ Data::Data()
     this->limI = false;
     this->limF = false;
     this->limD = false;
-    this->sign = 1;
+
+    this->pointCount = 1;
 }
 Data::~Data(){}
 Data::Data(const Data& obj){*this = obj;}
@@ -38,7 +39,7 @@ bool 	Data::getLimI(){return this->limI;}
 bool 	Data::getLimF(){return this->limF;}
 bool 	Data::getLimD(){return this->limD;}
 
-int 	Data::getSign(){return this->sign;}
+int		Data::getPointCount(){return this->pointCount;}
 
 void	Data::setC(char c){this->c = c;}
 void	Data::setI(int i){this->i = i;}
@@ -50,4 +51,6 @@ void	Data::setLimI(bool limI){this->limI = limI;}
 void	Data::setLimF(bool limF){this->limF = limF;}
 void	Data::setLimD(bool limD){this->limD = limD;}
 
-void	Data::setSign(int sign){this->sign = sign;}
+void	Data::setPointCount(int pointCount){this->pointCount = pointCount;}
+
+

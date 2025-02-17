@@ -6,7 +6,7 @@
 /*   By: menasy <menasy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/16 15:27:24 by menasy            #+#    #+#             */
-/*   Updated: 2025/02/17 18:18:43 by menasy           ###   ########.fr       */
+/*   Updated: 2025/02/18 00:29:06 by menasy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ void ScalarConverter::displayInt()
 
 void ScalarConverter::displayDouble()
 {
-    std::cout << std::fixed << std::setprecision(2);
+    std::cout << std::fixed << std::setprecision(data.getPointCount());
     if (data.getLimD())
         std::cout << "Double: impossible " << std::endl;
     else
@@ -52,7 +52,7 @@ void ScalarConverter::displayDouble()
 }
 void ScalarConverter::displayFloat()
 {
-    std::cout << std::fixed << std::setprecision(2);
+    std::cout << std::fixed << std::setprecision(data.getPointCount());
     if (data.getLimF())
         std::cout << "Float: impossible " << std::endl;
     else
@@ -88,70 +88,110 @@ void ScalarConverter::convertOne(const std::string& literal)
         displayData();
     } 
 }
-
+static int lenPoint(const std::string& str)
+{
+	int point;
+	int pointCount = 1;
+	
+	point = str.find_first_of(".");
+	if (point == (int)(str.length() -1) || point == (int)std::string::npos)
+		return pointCount;
+	for (int i = 0; i < point; i++)
+	{
+		if (!isdigit(str[i]))
+			return pointCount;
+	}
+	if (!isdigit(str[point + 1]))
+		return pointCount;
+	else
+		pointCount--;
+	for (int i = point + 1; i < (int)str.length(); i++)
+	{
+		if (isdigit(str[i]))
+			pointCount++;
+		else
+			break;
+	}
+	return pointCount;
+}
 void ScalarConverter::checkLimits(const std::string& literal)
 {
     std::istringstream iss(literal);
     long int intNum;
-    long double doubleNum;
-    
-    iss >> doubleNum;
-    intNum = static_cast<long int>(doubleNum);
-
+   	long double doubleNum;
+	
+	iss >> doubleNum;
+	intNum = static_cast<long int>(doubleNum);
+	   
+	if (intNum > 0)
+		data.setPointCount(lenPoint(literal));
+	else
+		data.setPointCount(lenPoint(literal.substr(1)));
+	
     if (intNum > std::numeric_limits<int>::max() || intNum < std::numeric_limits<int>::min())
     {
         data.setLimI(true);
         data.setLimC(true);
     }
-    if (doubleNum > std::numeric_limits<double>::max() || doubleNum < std::numeric_limits<double>::min())
-        data.setLimD(true);
-    if (doubleNum > std::numeric_limits<float>::max() || doubleNum < std::numeric_limits<float>::min())
+    if (doubleNum > std::numeric_limits<double>::max() || doubleNum < -std::numeric_limits<double>::max())
+        data.setLimD(true);	
+    if (doubleNum > std::numeric_limits<float>::max() || doubleNum < -std::numeric_limits<float>::max())
         data.setLimF(true);
-  
 }
 void ScalarConverter::convertNum(const std::string& numStr)
 {
-    if (!data.getLimD())
-    {
-        data.setD(std::atof(numStr.c_str()));
-        if (data.getSign() == -1)
-            data.setD(data.getD() * -1);
-        data.setI(static_cast<int>(data.getD()));
-        data.setC(static_cast<char>(data.getI()));
-        data.setF(static_cast<float>(data.getD()));
-    }
-    displayData();
+    	if (!data.getLimD())
+        	data.setD(std::atof(numStr.c_str()));
+        if(!data.getI())
+            data.setI(static_cast<int>(data.getD()));
+        if (!data.getC())
+            data.setC(static_cast<char>(data.getI()));
+        if (!data.getF())
+            data.setF(static_cast<float>(data.getD()));
+        displayData();
 }
-
-
+void  ScalarConverter::handlePseudoLiteral(const std::string& literal)
+{
+	if (literal == "nan" || literal == "nanf")
+	{
+		data.setD(std::numeric_limits<double>::quiet_NaN());
+		data.setF(std::numeric_limits<float>::quiet_NaN());
+	}
+	else if (literal == "+inf" || literal == "+inff")
+	{
+		data.setD(std::numeric_limits<double>::infinity());
+		data.setF(std::numeric_limits<float>::infinity());
+	}
+	else if (literal == "-inf" || literal == "-inff")
+	{
+		data.setD(-std::numeric_limits<double>::infinity());
+		data.setF(-std::numeric_limits<float>::infinity());
+	}
+	else
+	{
+		data.setLimF(true);
+		data.setLimD(true);
+	}
+	
+}
 void ScalarConverter::convert(const std::string& literal)
 {
-    std::string numStr = literal;  
     
     if (literal.length() == 1)
     {
         convertOne(literal);
         return;
     }
-    else if (literal[0] == '-' && isdigit(literal[1]))
-    {
-        data.setSign(-1);
-        numStr = literal.substr(1);
-        checkLimits(numStr);
-    }
-    else if (isdigit(literal[0]))
+    else if ((literal[0] == '-' && isdigit(literal[1])) || isdigit(literal[0]))
         checkLimits(literal);
     else
     {
         data.setLimC(true);
         data.setLimI(true);
-        data.setLimF(true);
-        data.setLimD(true);
+		handlePseudoLiteral(literal);
         displayData();
         return;
     }
-    convertNum(numStr);
-    
-
+    convertNum(literal);
    
 }

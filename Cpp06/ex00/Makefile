@@ -3,7 +3,7 @@ SRC = main.cpp ScalarConverter.cpp Data.cpp
 
 OBJS = $(SRC:.cpp=.o)
 CC = c++
-CFLAGS = -Wall -Wextra -Werror -std=c++98 -fsanitize=address -g
+CFLAGS = -Wall -Wextra -Werror -std=c++98 
 
 all: $(NAME)
 $(NAME): $(OBJS)

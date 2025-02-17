@@ -6,7 +6,7 @@
 /*   By: menasy <menasy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/16 15:20:50 by menasy            #+#    #+#             */
-/*   Updated: 2025/02/16 22:28:35 by menasy           ###   ########.fr       */
+/*   Updated: 2025/02/17 22:58:50 by menasy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,9 @@ class Data
         bool    limI;
         bool    limF;
         bool    limD;
+
+        int pointCount;
         
-        int     sign;
     public:
         Data();
         ~Data();
@@ -44,9 +45,9 @@ class Data
         bool 	getLimI();
         bool 	getLimF();
         bool 	getLimD();
-		
-        int 	getSign();
-        
+
+        int     getPointCount();
+		        
         void	setC(char c);
         void	setI(int i);
         void	setF(float f);
@@ -57,7 +58,7 @@ class Data
         void	setLimF(bool limF);
         void	setLimD(bool limD);
         
-        void 	setSign(int sign);
+        void    setPointCount(int pointCount);
         
 };
 
