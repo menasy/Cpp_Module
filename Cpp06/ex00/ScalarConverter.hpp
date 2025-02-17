@@ -6,7 +6,7 @@
 /*   By: menasy <menasy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/16 15:20:50 by menasy            #+#    #+#             */
-/*   Updated: 2025/02/16 23:04:11 by menasy           ###   ########.fr       */
+/*   Updated: 2025/02/17 17:46:04 by menasy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ class ScalarConverter
         static void displayData();
         static void convertOne(const std::string& literal);
         static void checkLimits(const std::string& literal);
+        static void convertNum(const std::string& literal);
         
     public:
         static void convert(const std::string &literal);

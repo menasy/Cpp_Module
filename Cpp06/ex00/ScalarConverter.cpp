@@ -6,7 +6,7 @@
 /*   By: menasy <menasy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/16 15:27:24 by menasy            #+#    #+#             */
-/*   Updated: 2025/02/16 23:51:02 by menasy           ###   ########.fr       */
+/*   Updated: 2025/02/17 18:18:43 by menasy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,9 @@ ScalarConverter& ScalarConverter::operator=(const ScalarConverter& obj){
 
 void ScalarConverter::displayChar(const int& c)
 {
-    if (data.getLimC())
+    if (data.getLimC() || (c < 0 || c > 127))
         std::cout << "Char: impossible " << std::endl;
-    else if (isprint(c))
+    else if (!data.getLimC() && isprint(c))
         std::cout << "Char: " << "'" << static_cast<char>(c) << "'" << std::endl;
     else
         std::cout << "Char: Non displayable " << std::endl;
@@ -98,18 +98,35 @@ void ScalarConverter::checkLimits(const std::string& literal)
     iss >> doubleNum;
     intNum = static_cast<long int>(doubleNum);
 
-    std::cout << "intNum: " << intNum << std::endl;
-    std::cout << "doubleNum: " << doubleNum << std::endl;
     if (intNum > std::numeric_limits<int>::max() || intNum < std::numeric_limits<int>::min())
+    {
         data.setLimI(true);
+        data.setLimC(true);
+    }
     if (doubleNum > std::numeric_limits<double>::max() || doubleNum < std::numeric_limits<double>::min())
         data.setLimD(true);
     if (doubleNum > std::numeric_limits<float>::max() || doubleNum < std::numeric_limits<float>::min())
         data.setLimF(true);
   
 }
+void ScalarConverter::convertNum(const std::string& numStr)
+{
+    if (!data.getLimD())
+    {
+        data.setD(std::atof(numStr.c_str()));
+        if (data.getSign() == -1)
+            data.setD(data.getD() * -1);
+        data.setI(static_cast<int>(data.getD()));
+        data.setC(static_cast<char>(data.getI()));
+        data.setF(static_cast<float>(data.getD()));
+    }
+    displayData();
+}
+
+
 void ScalarConverter::convert(const std::string& literal)
-{  
+{
+    std::string numStr = literal;  
     
     if (literal.length() == 1)
     {
@@ -119,7 +136,8 @@ void ScalarConverter::convert(const std::string& literal)
     else if (literal[0] == '-' && isdigit(literal[1]))
     {
         data.setSign(-1);
-        checkLimits(literal.substr(1));
+        numStr = literal.substr(1);
+        checkLimits(numStr);
     }
     else if (isdigit(literal[0]))
         checkLimits(literal);
@@ -132,7 +150,8 @@ void ScalarConverter::convert(const std::string& literal)
         displayData();
         return;
     }
-    // Buraya gelindiğinde literal bir sayıdır. checkLimitse girmiştir
+    convertNum(numStr);
+    
 
    
 }
