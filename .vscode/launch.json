@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": false,
-      "cwd": "/home/menasy/Desktop/Cpp_Module",
-      "program": "/home/menasy/Desktop/Cpp_Module/build/Debug/outDebug",
+      "cwd": "/home/menasy/Desktop/Cpp_Module/Cpp06/ex00",
+      "program": "/home/menasy/Desktop/Cpp_Module/Cpp06/ex00/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
