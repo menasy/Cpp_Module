@@ -6,7 +6,7 @@
 /*   By: menasy <menasy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/19 16:53:08 by menasy            #+#    #+#             */
-/*   Updated: 2025/02/19 18:09:42 by menasy           ###   ########.fr       */
+/*   Updated: 2025/02/20 13:19:30 by menasy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,9 +54,11 @@ void Base::identify(Base* p)
 
 void Base::identify(Base& p)
 {
+	Base *ptr = NULL;
     try
 	{
-		dynamic_cast<A&>(p);
+		*ptr = dynamic_cast<A&>(p);
+		(void)ptr;
 		std::cout << "Base &ref: A" << std::endl;
 	}
 	catch(const std::exception& e)
@@ -64,7 +66,8 @@ void Base::identify(Base& p)
 		(void)e;
 		try
 		{
-			dynamic_cast<B&>(p);
+			*ptr = dynamic_cast<B&>(p);
+			(void)ptr;
 			std::cout << "Base &ref: B" << std::endl;
 		}
 		catch(const std::exception& e)
@@ -72,7 +75,8 @@ void Base::identify(Base& p)
 			(void)e;
 			try
 			{
-				dynamic_cast<C&>(p);
+				*ptr = dynamic_cast<C&>(p);
+				(void)ptr;	
 				std::cout << "Base &ref: C" << std::endl;
 			}
 			catch(const std::exception& e)
