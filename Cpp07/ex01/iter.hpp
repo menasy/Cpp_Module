@@ -6,7 +6,7 @@
 /*   By: menasy <menasy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/21 16:10:24 by menasy            #+#    #+#             */
-/*   Updated: 2025/02/21 18:14:13 by menasy           ###   ########.fr       */
+/*   Updated: 2025/02/22 00:52:35 by menasy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,10 @@
 #include <iostream>
 
 template <typename T> 
-void iter(T *a, int lenght, T (*f)(T &))
+void iter(T *a, int lenght, void (*func)(T&))
 {
 	for (int i = 0; i < lenght; i++)
-		a[i] = f(a[i]);
+		func(a[i]);
 }
 
 template <typename T>
