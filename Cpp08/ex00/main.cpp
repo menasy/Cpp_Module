@@ -6,7 +6,7 @@
 /*   By: menasy <menasy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/01 13:45:05 by menasy            #+#    #+#             */
-/*   Updated: 2025/03/01 20:02:56 by menasy           ###   ########.fr       */
+/*   Updated: 2025/03/07 01:24:16 by menasy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 #include <vector>
 #include <list>
 #include <deque>
-#include <stack>
 
 int main()
 {
