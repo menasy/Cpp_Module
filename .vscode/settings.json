@@ -111,6 +111,7 @@
     "*.tpp": "cpp",
     "cstring": "cpp",
     "list": "cpp",
-    "set": "cpp"
+    "set": "cpp",
+    "map": "cpp"
   }
 }
