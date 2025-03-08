@@ -6,7 +6,7 @@
 /*   By: menasy <menasy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/08 12:54:12 by menasy            #+#    #+#             */
-/*   Updated: 2025/03/08 15:43:55 by menasy           ###   ########.fr       */
+/*   Updated: 2025/03/08 17:28:02 by menasy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ RPN &RPN::operator=(const RPN &src)
 		this->rpnStack = src.rpnStack;
 	return *this;
 }
-static int error()
+int RPN::error()
 {
 	std::cerr << "Error" << std::endl;
 	return 1;
@@ -48,7 +48,7 @@ int RPN::sub(const int& nb1, const int& nb2)
 	return (nb1 - nb2);
 }
 
-static bool checkStr(std::string& str)
+bool RPN::checkStr(std::string& str)
 {
 	for (int i = 0; i < (int)str.size(); i++)
 	{
@@ -60,7 +60,7 @@ static bool checkStr(std::string& str)
 	}
 	return (false);
 }
-static bool strIsDigit(std::string& str)
+bool RPN::strIsDigit(std::string& str)
 {
 	for (int i = 0; i < (int)str.size(); i++)
 	{
@@ -122,7 +122,6 @@ int   RPN::calculate(std::string str)
 				return(error());
 		}
 	}
-	std::cout << this->rpnStack.size() << std::endl;
 	if (this->rpnStack.size() != 1)
 		return(error());
 	std::cout << this->rpnStack.top() << std::endl;
