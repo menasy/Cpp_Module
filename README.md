@@ -1,136 +1,102 @@
-# **C++ Modül Projeleri**
+# C++ Modülleri Projesi
 
-Bu repository, 42 okulu kapsamında tamamladığım C++ modüllerini içermektedir. Her bir modül, C++ dilinin farklı yönlerine odaklanmaktadır ve nesne yönelimli programlama (OOP), bellek yönetimi, polimorfizm, kalıtım ve soyut sınıflar gibi konuları kapsamaktadır.
+Bu repo, 42 okul projeleri kapsamında tamamlanmış C++ modüllerini içermektedir. Her bir modül, C++ programlama dilinin farklı kavramlarını ve özelliklerini uygulamalı olarak öğrenmek için tasarlanmıştır.
 
----
+## İçindekiler
 
-## **Modüller ve Öğrendiklerim**
+Bu projede aşağıdaki C++ modülleri yer almaktadır:
 
-### [**Cpp00: C++ Temelleri, Sınıflar ve Basit Dosya Yapıları**](https://github.com/menasy/CPP_Module/tree/main/Cpp00)
-- **Öğrenilenler:**
-  - Getter ve setter kullanarak verilerin dış müdahalelerden korunması (kapsülleme).
-  - Sınıf ve nesne yapıları, constructor ve destructor kullanımı.
-  - Statik ve statik olmayan değişkenlerin farkları.
-  - `iostream` kullanımı ile temel dosya giriş/çıkış işlemleri.
+- [CPP00 - Namespaces, Classes, Member Functions, stdio Streams, Initialization Lists, Static, Const](#cpp00)
+- [CPP01 - Bellek Ayırma, Üye İşaretçileri, Referanslar, Switch İfadeleri](#cpp01)
+- [CPP02 - Ad-hoc Polimorfizm, Operatör Aşırı Yükleme, Ortodoks Kanonik Sınıf Formu](#cpp02)
+- [CPP03 - Kalıtım (Inheritance)](#cpp03)
+- [CPP04 - Alt Tür Polimorfizmi, Soyut Sınıflar, Arayüzler](#cpp04)
+- [CPP05 - İstisna İşleme (Exception Handling)](#cpp05)
+- [CPP06 - C++ Cast ve Tür Dönüşümleri](#cpp06)
+- [CPP07 - C++ Şablonlar (Templates)](#cpp07)
+- [CPP08 - Templated Containers, İteratörler, Algoritmalar](#cpp08)
+- [CPP09 - STL (Standard Template Library)](#cpp09)
 
-- **Notlar:**
-  - **Encapsulation:** Private değerlere getter ve setter ile erişim sağlanarak dışarıdan müdahalelere karşı korunur. Örneğin, yaş değerinin -4 yapılmasını engellemek için kapsülleme kullanılır.
-  - **Delete ve Free:** `new` ile heap'te nesne oluşturulurken, `delete` destructor çağırır. `free()` doğrudan bellek serbest bırakır, ancak kaynakları temizlemeden yapması Undefined Behavior'a yol açar.
-  - **Delete[]:** Dizilerde ters sırada bellek serbest bırakma güvenli bir yaklaşımdır; destructor'lar tersten çağrılır.
-  - **Kopyalama ve Atama:**
-    - **Default Constructor:** Varsayılan kopyalama, dinamik bellekle çalışırken sorun çıkarabilir.
-    - **Manual Copy Constructor:** Dinamik bellek kullanan sınıflar için gerekli, derin kopyalama yapar.
-    - **Assignment Operator:** Varsayılan operatör shallow copy yapar; manuel operatör ise deep copy ile bellek yönetimini sağlar.
+## Modüller
 
-- **Kaynaklar:**
-  - [GeeksforGeeks - Kapsülleme](https://www.geeksforgeeks.org/encapsulation-in-c/)
-  - [LearnCPP - Constructor ve Destructor](https://www.learncpp.com/cpp-tutorial/introduction-to-classes-and-objects/)
-  - [YouTube - Yazılımagonulver C++](https://youtube.com/playlist?list=PLfs1gAT4S8yInGkovwucGKCjcxP-Odf7Q)
+<a name="cpp00"></a>
+### CPP00 - Namespaces, Classes, Member Functions, stdio Streams, Initialization Lists, Static, Const
 
----
+Bu modül, C++'ın temel konseptlerini öğrenmek için tasarlanmış bir dizi alıştırmadan oluşmaktadır. C tarzı programlamadan C++ tarzı programlamaya geçiş yaparak nesne yönelimli programlamanın (OOP) temel prensiplerini uygulamayı öğrendiğim ilk modüldür.
 
-### [**Cpp01: Bellek Yönetimi, İşaretçiler ve Referanslar**](https://github.com/menasy/CPP_Module/tree/main/Cpp01)
-- **Öğrenilenler:**
-  - Dinamik bellek yönetimi (`new`, `delete`).
-  - Yüzeysel (shallow) ve derin (deep) kopyalamanın farkları.
-  - Rvalue ve Lvalue referanslar ile çalışma.
-  - `delete[]` kullanımında dizilerin sondan başlanarak serbest bırakılması.
+Bu modülde, C++ programlama dilinin temel konseptlerini anlamak ve uygulamak için çalışmalar yapılmıştır. Nesne yönelimli programlamanın temel prensipleri, sınıfların nasıl tasarlanacağı ve C++'ın temel kütüphanelerinin nasıl kullanılacağı öğrenilmiştir.
 
-- **Notlar:**
-  - **Shallow Copy (Yüzeysel Kopya):** Nesneler aynı bellek adresini paylaşır. Bir nesnede yapılan değişiklik diğerini de etkiler.
-  - **Deep Copy (Derin Kopya):** Nesneler arasında tam kopyalama yapılır; her nesne farklı bellek adresine sahiptir.
-  - **Operator Overloading (Operatör Aşırı Yükleme):**
-    - Operatörler, kullanıcı tanımlı sınıflarda aşırı yüklenebilir.
-    - Tek bir nesne üzerinde de aşırı yükleme yapılabilir.
-  - **Rvalue ve Lvalue Referansları:**
-    - **Lvalue:** Adresi tutulabilen değerlerdir (örneğin, değişkenler).
-    - **Rvalue:** Geçici değerlerdir (örneğin, literaller).
-    - `&&` ile rvalue referansları, geçici değerlerin ömrünü uzatır.
+[CPP00 Detayları](https://github.com/menasy/Cpp_Module/tree/main/Cpp00)
 
-- **Kaynaklar:**
-  - [GeeksforGeeks - Shallow ve Deep Copy](https://www.geeksforgeeks.org/shallow-copy-and-deep-copy-in-c/)
-  - [LearnCPP - Bellek Yönetimi](https://www.learncpp.com/cpp-tutorial/dynamic-memory-allocation-with-new-and-delete/)
-  - [YouTube - Yazılımbilimi C++](https://youtube.com/playlist?list=PLfs1gAT4S8yInGkovwucGKCjcxP-Odf7Q)
+<a name="cpp01"></a>
+### CPP01 - Bellek Ayırma, Üye İşaretçileri, Referanslar, Switch İfadeleri
 
----
+Bu modül, C++'ta bellek yönetimi, işaretçiler, referanslar ve switch ifadeleri gibi temel kavramların derinlemesine anlaşılmasını sağlamak üzere tasarlanmıştır. Her bir alıştırma, bu kavramları pratik uygulamalarla pekiştirmeye olanak tanımıştır.
 
-### [**Cpp02: Polimorfizm, Kayan ve Sabit Noktalı Sayılar**](https://github.com/menasy/CPP_Module/tree/main/Cpp02)
-- **Öğrenilenler:**
-  - Operatör aşırı yükleme ile kullanıcı tanımlı işlemler.
-  - Varsayılan (default) ve kullanıcı tanımlı kopyalama yapıcılar.
-  - IEEE 754 standardı ile kayan nokta sayıların temsili.
+Bellek yönetimi, işaretçiler ve referanslar arasındaki farklar, üye fonksiyonlara işaretçiler ve switch-case yapısının kullanımı gibi C++'ın temel kavramları derinlemesine ele alınmıştır.
 
-- **Notlar:**
-  - **Kayan Noktalı Sayılar:**
-    - IEEE 754 standardında üç bileşen vardır:
-      - **İşaret:** Pozitif veya negatiflik.
-      - **Exponent:** Üs, sayının büyüklüğünü belirtir.
-      - **Mantissa:** Kesirli kısmı temsil eder.
-    - Kayan noktalı sayılar büyük bir hassasiyet sağlar ancak yuvarlama hatalarına açıktır.
-  - **Sabit Noktalı Sayılar:**
-    - Tam sayılar üzerinden işlem yaparak performans avantajı sunar.
-    - Bellek verimliliği sağlar ancak yuvarlama hatalarına sebep olabilir.
+[CPP01 Detayları](https://github.com/menasy/Cpp_Module/tree/main/Cpp01)
 
-- **Kaynaklar:**
-  - [GeeksforGeeks - Operatör Aşırı Yükleme](https://www.geeksforgeeks.org/operator-overloading-cpp/)
-  - [LearnCPP - Floating Point Numbers](https://www.learncpp.com/cpp-tutorial/floating-point-numbers/)
-  - [IEEE 754 Standardı](https://www.geeksforgeeks.org/ieee-standard-754-floating-point-numbers/)
+<a name="cpp02"></a>
+### CPP02 - Ad-hoc Polimorfizm, Operatör Aşırı Yükleme, Ortodoks Kanonik Sınıf Formu
 
----
+Bu modül, C++'da ad-hoc polimorfizmi, operatör aşırı yüklemelerini ve ortodoks kanonik sınıf formunu anlamaya yardımcı olmak için tasarlanmıştır. Modül kapsamında sabit noktalı sayıları (fixed-point numbers) uygulanmıştır.
 
-### [**Cpp03: Kalıtım ve Sanal Fonksiyonlar**](https://github.com/menasy/CPP_Module/tree/main/Cpp03)
-- **Öğrenilenler:**
-  - Çoklu kalıtım ve sanal miras yapıları.
-  - Kalıtımda constructor ve destructor sıralamaları.
-  - Sanal tabloların (VTable) mekanizması.
+[CPP02 Detayları](https://github.com/menasy/Cpp_Module/tree/main/Cpp02)
 
-- **Notlar:**
-  - **Çift Miras (Multiple Inheritance):**
-    - Problem: Aynı temel sınıfın birden fazla kez türetilmesi belirsizlik yaratır.
-    - Çözüm: Sanal miras ile temel sınıfın yalnızca bir örneği saklanır.
-  - **Constructor ve Destructor Sıralamaları:**
-    - Constructor çağrıldığında önce temel sınıfın constructor’ı çalışır.
-    - Destructor çağrıldığında önce türetilmiş sınıfın destructor’ı çalışır.
-  - **Atama Operatörleri:**
-    - **Upcasting:** Türetilmiş sınıf, temel sınıfa atanabilir.
-    - **Ters Yönlü Atama:** Temel sınıf türetilmiş sınıfa atanamaz.
+<a name="cpp03"></a>
+### CPP03 - Kalıtım (Inheritance)
 
-- **Kaynaklar:**
-  - [JavatPoint - Çoklu Kalıtım](https://www.javatpoint.com/cpp-inheritance)
-  - [GeeksforGeeks - Kalıtımda Constructor ve Destructor](https://www.geeksforgeeks.org/order-constructor-destructor-call-c/)
-  - [LearnCPP - Virtual Inheritance](https://www.learncpp.com/cpp-tutorial/virtual-base-classes/)
-  - 
-![Inheritance Access](https://github.com/menasy/Project_icons/blob/main/Cpp_ModuleImages/InheritanceAccess.png)
+Bu modül, C++'da kalıtım (inheritance) kavramını anlamaya yardımcı olmak için tasarlanmıştır. Modül kapsamında Borderlands oyunundan esinlenilen karakterler kullanarak kalıtım mekanizmaları uygulanmıştır.
 
+[CPP03 Detayları](https://github.com/menasy/Cpp_Module/tree/main/Cpp03)
 
----
+<a name="cpp04"></a>
+### CPP04 - Alt Tür Polimorfizmi, Soyut Sınıflar, Arayüzler
 
-### [**Cpp04: Polimorfizm, Sanal Fonksiyonlar ve Soyut Sınıflar**](https://github.com/menasy/CPP_Module/tree/main/Cpp04)
-- **Öğrenilenler:**
-  - Soyut sınıflar ve saf sanal fonksiyonlar.
-  - Dinamik bağlama ile sanal fonksiyonların çalışması.
-  - Polimorfizm için sanal yıkıcıların önemi.
+Bu modülde, C++ dilindeki alt tür polimorfizmi, soyut sınıflar ve arayüzler gibi nesne yönelimli programlama kavramları üzerinde çalışılmıştır.
 
-- **Notlar:**
-  - **Polimorfizm ve Sanal Fonksiyonlar:**
-    - İşaretçi veya referans kullanılarak dinamik bağlama yapılabilir.
-    - Sanal tablo (VTable), doğru türetilmiş sınıf fonksiyonunun çağrılmasını sağlar.
-  - **Soyut Sınıflar ve Saf Sanal Fonksiyonlar:**
-    - Soyut sınıflar örneklenemez, saf sanal fonksiyonlar türetilmiş sınıfta tanımlanmalıdır.
-  - **Interface ve Saf Soyut Sınıflar:**
-    - C++ arayüzleri saf soyut sınıflarla yapılır ve yalnızca metotlar içerir, üye değişkenlere sahip olamaz.
+[CPP04 Detayları](https://github.com/menasy/Cpp_Module/tree/main/Cpp04)
 
-- **Kaynaklar:**
-  - [GeeksforGeeks - Polimorfizm ve Sanal Fonksiyonlar](https://www.geeksforgeeks.org/cpp-polymorphism/)
-  - [LearnCPP - Abstract Classes](https://www.learncpp.com/cpp-tutorial/pure-virtual-functions-abstract-base-classes-and-interface-classes/)
-  - 
-![Virtual Table](https://github.com/menasy/Project_icons/blob/main/Cpp_ModuleImages/VirtualTable.png)
-![Virtual Table ](https://github.com/menasy/Project_icons/blob/main/Cpp_ModuleImages/VirtualTable2.png)
+<a name="cpp05"></a>
+### CPP05 - İstisna İşleme (Exception Handling)
 
----
+Bu modül, C++ programlama dilindeki istisna işleme (exception handling) mekanizmalarını anlama ve uygulama becerilerini geliştirmeye odaklanmaktadır. Modül, bürokrasi temalı bir senaryo üzerinden try-catch blokları, özel istisna sınıfları ve istisna yönetimini uygulamalı olarak öğretmeyi amaçlamıştır.
 
-## **Genel Kaynaklar**
-- [GeeksforGeeks](https://www.geeksforgeeks.org)
-- [LearnCPP](https://www.learncpp.com)
-- [YouTube - Yazılımagonulver C++](https://youtube.com/playlist?list=PLfs1gAT4S8yInGkovwucGKCjcxP-Odf7Q)
-- [YouTube - Yazılımbilimi C++](https://youtube.com/playlist?list=PLfs1gAT4S8yInGkovwucGKCjcxP-Odf7Q)
+[CPP05 Detayları](https://github.com/menasy/Cpp_Module/tree/main/Cpp05)
+
+<a name="cpp06"></a>
+### CPP06 - C++ Cast ve Tür Dönüşümleri
+
+Bu modül, C++'ta tür dönüşümleri, serileştirme ve dinamik tür tanıma konularını içeren alıştırmalardan oluşmaktadır. C++'ın farklı cast operatörleri ve bunların kullanım alanları incelenmiştir.
+
+[CPP06 Detayları](https://github.com/menasy/Cpp_Module/tree/main/Cpp06)
+
+<a name="cpp07"></a>
+### CPP07 - C++ Şablonlar (Templates)
+
+Bu modül, C++ programlama dilindeki şablonları (templates) incelemeye odaklanmaktadır. Şablonlar, farklı veri tipleriyle çalışabilen genel kod yazma olanağı sağlar ve bu modülde şablonların temel kullanımları öğrenilmiştir.
+
+[CPP07 Detayları](https://github.com/menasy/Cpp_Module/tree/main/Cpp07)
+
+<a name="cpp08"></a>
+### CPP08 - Templated Containers, İteratörler, Algoritmalar
+
+Bu modül, C++'ta şablon kullanımını, STL containerlerini, iteratörleri ve algoritmaları derinlemesine incelemeyi sağlamıştır. Modern C++ projelerinde sıklıkla kullanılan bu yapıların etkili kullanımı, performanslı ve sürdürülebilir kodlar yazılmasında önemli rol oynamaktadır.
+
+C++ Standard Template Library (STL) içindeki temel veri yapıları ve algoritmaları kullanarak, gerçek dünya problemlerini çözmeye yönelik çeşitli uygulamalar geliştirilmiştir.
+
+[CPP08 Detayları](https://github.com/menasy/Cpp_Module/tree/main/Cpp08)
+
+<a name="cpp09"></a>
+### CPP09 - STL (Standard Template Library)
+
+Bu modül, C++ programlama dilinin güçlü kütüphanesi olan STL'in (Standard Template Library) kullanımını öğrenmeyi ve farklı konteynerler arasındaki performans farklarını anlamayı amaçlamaktadır. Modül, üç farklı alıştırma içermekte ve her birinde farklı STL konteynerlerinin kullanılması gerekmiştir.
+
+STL, C++ programlama dilinin sunduğu, veri yapılarını ve algoritmaları içeren kapsamlı bir kütüphanedir. Bu modülde, STL konteynerlerinin farklı senaryolarda nasıl kullanılacağı ve her birinin performans özellikleri incelenmiştir.
+
+[CPP09 Detayları](https://github.com/menasy/Cpp_Module/tree/main/Cpp09)
+
+## Projenin Amacı
+
+Bu proje, 42 okul müfredatı kapsamında C++ programlama dilinin temel ve ileri seviye özelliklerini adım adım öğrenmeyi amaçlamaktadır. Nesne yönelimli programlama paradigmasından başlayarak, şablonlar, STL ve modern C++ tekniklerine kadar geniş bir yelpazede bilgi ve deneyim kazandırmıştır.
