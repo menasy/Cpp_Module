@@ -6,96 +6,134 @@ Bu repo, 42 okul projeleri kapsamında tamamlanmış C++ modüllerini içermekte
 
 Bu projede aşağıdaki C++ modülleri yer almaktadır:
 
-- [CPP00 - Namespaces, Classes, Member Functions, stdio Streams, Initialization Lists, Static, Const](#cpp00)
-- [CPP01 - Bellek Ayırma, Üye İşaretçileri, Referanslar, Switch İfadeleri](#cpp01)
-- [CPP02 - Ad-hoc Polimorfizm, Operatör Aşırı Yükleme, Ortodoks Kanonik Sınıf Formu](#cpp02)
-- [CPP03 - Kalıtım (Inheritance)](#cpp03)
-- [CPP04 - Alt Tür Polimorfizmi, Soyut Sınıflar, Arayüzler](#cpp04)
-- [CPP05 - İstisna İşleme (Exception Handling)](#cpp05)
-- [CPP06 - C++ Cast ve Tür Dönüşümleri](#cpp06)
-- [CPP07 - C++ Şablonlar (Templates)](#cpp07)
-- [CPP08 - Templated Containers, İteratörler, Algoritmalar](#cpp08)
-- [CPP09 - STL (Standard Template Library)](#cpp09)
+- [CPP00 - Namespaces, Classes, Member Functions, Initialization Lists, Static, Const](#cpp00)  
+- [CPP01 - Memory Management, Pointers, References, Switch Statements](#cpp01)  
+- [CPP02 - Ad-hoc Polymorphism, Operator Overloading, Orthodox Canonical Class Form](#cpp02)  
+- [CPP03 - Inheritance](#cpp03)  
+- [CPP04 - Subtype Polymorphism, Abstract Classes, Interfaces](#cpp04)  
+- [CPP05 - Exception Handling](#cpp05)  
+- [CPP06 - C++ Casts and Type Conversions](#cpp06)  
+- [CPP07 - C++ Templates](#cpp07)  
+- [CPP08 - Templated Containers, Iterators, Algorithms](#cpp08)  
+- [CPP09 - STL (Standard Template Library)](#cpp09)  
 
 ## Modüller
 
 <a name="cpp00"></a>
-### CPP00 - Namespaces, Classes, Member Functions, stdio Streams, Initialization Lists, Static, Const
+### [CPP00](https://github.com/menasy/Cpp_Module/tree/main/Cpp00)
 
-Bu modül, C++'ın temel konseptlerini öğrenmek için tasarlanmış bir dizi alıştırmadan oluşmaktadır. C tarzı programlamadan C++ tarzı programlamaya geçiş yaparak nesne yönelimli programlamanın (OOP) temel prensiplerini uygulamayı öğrendiğim ilk modüldür.
+Bu modül, C++'ın temel konseptlerini öğrenmek için tasarlanmış bir dizi alıştırmadan oluşmaktadır. C tarzı programlamadan C++ tarzı programlamaya geçiş yaparak **Nesne Yönelimli Programlama (Object-Oriented Programming - OOP)** prensiplerini uygulamayı öğrendiğim ilk modüldür.
 
-Bu modülde, C++ programlama dilinin temel konseptlerini anlamak ve uygulamak için çalışmalar yapılmıştır. Nesne yönelimli programlamanın temel prensipleri, sınıfların nasıl tasarlanacağı ve C++'ın temel kütüphanelerinin nasıl kullanılacağı öğrenilmiştir.
+Bu modülde aşağıdaki kavramlar öğrenilmiştir:
 
-[CPP00 Detayları](https://github.com/menasy/Cpp_Module/tree/main/Cpp00)
+- **Namespaces (İsim Alanları)**
+- **Classes (Sınıflar)**
+- **Member Functions (Üye Fonksiyonlar)**
+- **Standard I/O Streams (Standart Giriş/Çıkış Akışları)**
+- **Initialization Lists (Başlatma Listeleri)**
+- **Static Members (Statik Üyeler)**
+- **Const (Sabit)**
 
 <a name="cpp01"></a>
-### CPP01 - Bellek Ayırma, Üye İşaretçileri, Referanslar, Switch İfadeleri
+### [CPP01](https://github.com/menasy/Cpp_Module/tree/main/Cpp01)
 
-Bu modül, C++'ta bellek yönetimi, işaretçiler, referanslar ve switch ifadeleri gibi temel kavramların derinlemesine anlaşılmasını sağlamak üzere tasarlanmıştır. Her bir alıştırma, bu kavramları pratik uygulamalarla pekiştirmeye olanak tanımıştır.
+Bu modül, C++'ta **Bellek Yönetimi (Memory Management), İşaretçiler (Pointers), Referanslar (References) ve Koşullu Yapılar (Conditional Statements)** gibi temel kavramların derinlemesine anlaşılmasını sağlamaktadır.
 
-Bellek yönetimi, işaretçiler ve referanslar arasındaki farklar, üye fonksiyonlara işaretçiler ve switch-case yapısının kullanımı gibi C++'ın temel kavramları derinlemesine ele alınmıştır.
+Bu modülde aşağıdaki konular ele alınmıştır:
 
-[CPP01 Detayları](https://github.com/menasy/Cpp_Module/tree/main/Cpp01)
+- **Memory Management (Bellek Yönetimi)**
+- **Pointers & References (İşaretçiler ve Referanslar)**
+- **Pointers to Member Functions (Üye Fonksiyonlara İşaretçiler)**
+- **Conditional Statements & Switch-Case (Koşullu Yapılar & Switch-Case)**
+- **Dynamic Memory Allocation (Dinamik Bellek Tahsisi)**
 
 <a name="cpp02"></a>
-### CPP02 - Ad-hoc Polimorfizm, Operatör Aşırı Yükleme, Ortodoks Kanonik Sınıf Formu
+### [CPP02](https://github.com/menasy/Cpp_Module/tree/main/Cpp02)
 
-Bu modül, C++'da ad-hoc polimorfizmi, operatör aşırı yüklemelerini ve ortodoks kanonik sınıf formunu anlamaya yardımcı olmak için tasarlanmıştır. Modül kapsamında sabit noktalı sayıları (fixed-point numbers) uygulanmıştır.
+Bu modül, C++'da **Ad-hoc Polymorphism (Ad-hoc Polimorfizm), Operator Overloading (Operatör Aşırı Yükleme) ve Orthodox Canonical Class Form (Ortodoks Kanonik Sınıf Formu)** kavramlarını anlamaya yardımcı olmak için tasarlanmıştır. Modül kapsamında aşağıdaki konular ele alınmıştır:
 
-[CPP02 Detayları](https://github.com/menasy/Cpp_Module/tree/main/Cpp02)
+- **Ad-hoc Polymorphism (Ad-hoc Polimorfizm)**
+- **Operator Overloading (Operatör Aşırı Yükleme)**
+- **Orthodox Canonical Class Form (Ortodoks Kanonik Sınıf Formu)**
+- **Fixed-point Numbers Application (Sabit Noktalı Sayılar Uygulaması)**
 
 <a name="cpp03"></a>
-### CPP03 - Kalıtım (Inheritance)
+### [CPP03](https://github.com/menasy/Cpp_Module/tree/main/Cpp03)
 
-Bu modül, C++'da kalıtım (inheritance) kavramını anlamaya yardımcı olmak için tasarlanmıştır. Modül kapsamında Borderlands oyunundan esinlenilen karakterler kullanarak kalıtım mekanizmaları uygulanmıştır.
+Bu modül, C++'da **Inheritance (Kalıtım)** kavramını anlamaya yardımcı olmak için tasarlanmıştır. Modül kapsamında aşağıdaki konular incelenmiştir:
 
-[CPP03 Detayları](https://github.com/menasy/Cpp_Module/tree/main/Cpp03)
+- **Base and Derived Classes (Temel ve Türetilmiş Sınıflar)**
+- **Access Specifiers (Erişim Belirleyicileri: public, protected, private)**
+- **Function Overriding (Fonksiyon Ezme / Override)**
+- **Virtual Functions (Sanal Fonksiyonlar)**
+- **Example from Borderlands (Borderlands Örneği)**
 
 <a name="cpp04"></a>
-### CPP04 - Alt Tür Polimorfizmi, Soyut Sınıflar, Arayüzler
+### [CPP04](https://github.com/menasy/Cpp_Module/tree/main/Cpp04)
 
-Bu modülde, C++ dilindeki alt tür polimorfizmi, soyut sınıflar ve arayüzler gibi nesne yönelimli programlama kavramları üzerinde çalışılmıştır.
+Bu modülde, C++ dilindeki **Subtype Polymorphism (Alt Tür Polimorfizmi), Abstract Classes (Soyut Sınıflar) ve Interfaces (Arayüzler)** gibi nesne yönelimli programlama kavramları üzerinde çalışılmıştır:
 
-[CPP04 Detayları](https://github.com/menasy/Cpp_Module/tree/main/Cpp04)
+- **Abstract Classes (Soyut Sınıflar)**
+- **Pure Virtual Functions (Saf Sanal Fonksiyonlar)**
+- **Interfaces (Arayüzler)**
+- **Polymorphism (Çok Biçimlilik)**
+- **Dynamic Memory Management & Virtual Destructors (Dinamik Bellek Yönetimi ve Sanal Destructor)**
 
 <a name="cpp05"></a>
-### CPP05 - İstisna İşleme (Exception Handling)
+### [CPP05](https://github.com/menasy/Cpp_Module/tree/main/Cpp05)
 
-Bu modül, C++ programlama dilindeki istisna işleme (exception handling) mekanizmalarını anlama ve uygulama becerilerini geliştirmeye odaklanmaktadır. Modül, bürokrasi temalı bir senaryo üzerinden try-catch blokları, özel istisna sınıfları ve istisna yönetimini uygulamalı olarak öğretmeyi amaçlamıştır.
+Bu modül, C++ programlama dilindeki **Exception Handling (İstisna İşleme)** mekanizmalarını öğretmeye odaklanmaktadır. Aşağıdaki konular ele alınmıştır:
 
-[CPP05 Detayları](https://github.com/menasy/Cpp_Module/tree/main/Cpp05)
+- **Exception Handling (İstisna İşleme)**
+- **Try-Catch Blocks (Try-Catch Blokları)**
+- **Custom Exception Classes (Özel İstisna Sınıfları)**
+- **Standard Exceptions (Standart İstisnalar, std::exception ve türevleri)**
+- **Exception Safety & Management (İstisna Güvenliği ve Yönetimi)**
+- **Bureaucracy-themed Scenario (Bürokrasi Temalı Uygulama Senaryosu)**
 
 <a name="cpp06"></a>
-### CPP06 - C++ Cast ve Tür Dönüşümleri
+### [CPP06](https://github.com/menasy/Cpp_Module/tree/main/Cpp06)
 
-Bu modül, C++'ta tür dönüşümleri, serileştirme ve dinamik tür tanıma konularını içeren alıştırmalardan oluşmaktadır. C++'ın farklı cast operatörleri ve bunların kullanım alanları incelenmiştir.
+Bu modül, C++'ta **Type Conversions (Tür Dönüşümleri), Casting Operators (Cast Operatörleri) ve Run-Time Type Information (RTTI - Dinamik Tür Tanıma)** konularını içermektedir:
 
-[CPP06 Detayları](https://github.com/menasy/Cpp_Module/tree/main/Cpp06)
+- **Type Conversions (Tür Dönüşümleri)**
+- **Casting Operators (Cast Operatörleri: static_cast, dynamic_cast, reinterpret_cast, const_cast)**
+- **C-Style Cast vs C++ Cast (C Tarzı Cast ile C++ Cast Farkları)**
+- **Run-Time Type Information (RTTI - Dinamik Tür Tanıma)**
+- **Serialization & Data Conversion (Serileştirme ve Veri Dönüşümleri)**
 
 <a name="cpp07"></a>
-### CPP07 - C++ Şablonlar (Templates)
+### [CPP07](https://github.com/menasy/Cpp_Module/tree/main/Cpp07)
 
-Bu modül, C++ programlama dilindeki şablonları (templates) incelemeye odaklanmaktadır. Şablonlar, farklı veri tipleriyle çalışabilen genel kod yazma olanağı sağlar ve bu modülde şablonların temel kullanımları öğrenilmiştir.
+Bu modül, C++ programlama dilindeki **Templates (Şablonlar)** üzerine odaklanmaktadır:
 
-[CPP07 Detayları](https://github.com/menasy/Cpp_Module/tree/main/Cpp07)
+- **Function Templates (Fonksiyon Şablonları)**
+- **Class Templates (Sınıf Şablonları)**
+- **Template Specialization (Şablon Uzmanlaştırma)**
+- **Template Instantiation (Şablon Türetme)**
+- **Generic Programming (Genel Programlama / Genel Kod Yazma)**
 
 <a name="cpp08"></a>
-### CPP08 - Templated Containers, İteratörler, Algoritmalar
+### [CPP08](https://github.com/menasy/Cpp_Module/tree/main/Cpp08)
 
-Bu modül, C++'ta şablon kullanımını, STL containerlerini, iteratörleri ve algoritmaları derinlemesine incelemeyi sağlamıştır. Modern C++ projelerinde sıklıkla kullanılan bu yapıların etkili kullanımı, performanslı ve sürdürülebilir kodlar yazılmasında önemli rol oynamaktadır.
+Bu modül, C++'ta **Templated Containers (Şablonlu Konteynerler), Iterators (İteratörler) ve Algorithms (Algoritmalar)** kullanımını incelemeyi sağlamaktadır:
 
-C++ Standard Template Library (STL) içindeki temel veri yapıları ve algoritmaları kullanarak, gerçek dünya problemlerini çözmeye yönelik çeşitli uygulamalar geliştirilmiştir.
-
-[CPP08 Detayları](https://github.com/menasy/Cpp_Module/tree/main/Cpp08)
+- **STL Containers (STL Containerleri)** – örneğin: vector, list, map, set, stack, queue
+- **Iterators (İteratörler)**
+- **Algorithms (Algoritmalar: find, sort, count, transform)**
+- **Memory Management with STL (STL ile Bellek Yönetimi)**
+- **Template-based Container Design (Şablon Bazlı Konteyner Tasarımı)**
 
 <a name="cpp09"></a>
-### CPP09 - STL (Standard Template Library)
+### [CPP09](https://github.com/menasy/Cpp_Module/tree/main/Cpp09)
 
-Bu modül, C++ programlama dilinin güçlü kütüphanesi olan STL'in (Standard Template Library) kullanımını öğrenmeyi ve farklı konteynerler arasındaki performans farklarını anlamayı amaçlamaktadır. Modül, üç farklı alıştırma içermekte ve her birinde farklı STL konteynerlerinin kullanılması gerekmiştir.
+Bu modül, C++ Standard Template Library (STL) kullanımını öğrenmeye ve **farklı konteynerler arasındaki performans farklarını** anlamaya odaklanmaktadır:
 
-STL, C++ programlama dilinin sunduğu, veri yapılarını ve algoritmaları içeren kapsamlı bir kütüphanedir. Bu modülde, STL konteynerlerinin farklı senaryolarda nasıl kullanılacağı ve her birinin performans özellikleri incelenmiştir.
-
-[CPP09 Detayları](https://github.com/menasy/Cpp_Module/tree/main/Cpp09)
+- **STL Containers (STL Konteynerleri)** – örneğin: vector, deque, set, multiset, map, multimap
+- **Performance Comparison (Performans Karşılaştırması: zaman ve bellek)**
+- **Iteration with Iterators (Iteratorlar ile Gezinme)**
+- **Effective Use of STL Algorithms (STL Algoritmalarının Etkin Kullanımı)**
+- **Practical Projects using STL (STL’in Pratik Uygulamaları)**
 
 ## Projenin Amacı
 
