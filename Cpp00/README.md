@@ -20,7 +20,6 @@ Bu modül üç alıştırmadan oluşmaktadır:
 - Standart giriş/çıkış akışlarının (iostream) kullanımı
 - Static ve const anahtar kelimelerinin kullanımı
 - Header dosyaları ve implementasyon dosyalarının ayrılması
-- Makefile kullanımı
 - Sınıfların private ve public bölümlerinin uygun şekilde tasarlanması
 
 ## Exercise 00: Megaphone
