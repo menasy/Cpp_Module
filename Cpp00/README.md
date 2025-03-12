@@ -63,7 +63,6 @@ Projede iki ana sınıf uyguladım:
 - Getter ve setter metodları
 - Private ve public erişim belirleyicileri
 - Kullanıcı girdisi alma ve doğrulama
-- Veri görüntüleme formatlaması (`std::setw`, `std::right` vb.)
 - Header ve implementasyon dosyalarının ayrılması
 
 ## Exercise 02: The Job Of Your Dreams
