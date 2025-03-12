@@ -1,18 +1,18 @@
 # C++ Module 02
 
-## Ad-hoc Polimorfizm, Operatör Aşırı Yükleme ve Ortodoks Kanonik Sınıf Formu
+## Polimorfizm, Operator Overloading ve Orthodox Canonical Class Form 
 
-Bu modül, C++'da ad-hoc polimorfizmi, operatör aşırı yüklemelerini ve ortodoks kanonik sınıf formunu anlamanıza yardımcı olmak için tasarlanmıştır. Modül kapsamında sabit noktalı sayıları (fixed-point numbers) uygulamaya çalışacağız.
+u modül, C++'da **polymorphism** (polimorfizm), **operator overloading** (operatör aşırı yükleme) ve **orthodox canonical class form** (ortodoks kanonik sınıf formu) kavramlarını anlamanıza yardımcı olmak için tasarlanmıştır. Modül kapsamında **fixed-point numbers** (sabit noktalı sayılar) uygulaması yapacağız.
 
 ## İçerik
 
-- [Exercise 00: Ortodoks Kanonik Formda İlk Sınıfım](#exercise-00-ortodoks-kanonik-formda-i̇lk-sınıfım)
-- [Exercise 01: Daha Kullanışlı Bir Sabit Noktalı Sayı Sınıfına Doğru](#exercise-01-daha-kullanışlı-bir-sabit-noktalı-sayı-sınıfına-doğru)
-- [Exercise 02: Şimdi Konuşuyoruz](#exercise-02-şimdi-konuşuyoruz)
+- [Exercise 00: My First Class in Orthodox Canonical Form](#exercise-00-my-first-class-in-orthodox-canonical-form)
+- [Exercise 01: Towards a More Useful Fixed-Point Number Class](#exercise-01-towards-a-more-useful-fixed-point-number-class)
+- [Exercise 02: Now We're Talking](#exercise-02-now-were-talking)
 - [Önemli Kavramlar](#önemli-kavramlar)
 - [Kaynaklar](#kaynaklar)
 
-## Exercise 00: Ortodoks Kanonik Formda İlk Sınıfım
+## Exercise 00: My First Class in Orthodox Canonical Form
 
 Bu alıştırmada, sabit noktalı sayıları temsil eden ve ortodoks kanonik forma uygun bir sınıf oluşturmanız gerekiyor.
 
@@ -30,7 +30,7 @@ Bu alıştırmada, sabit noktalı sayıları temsil eden ve ortodoks kanonik for
   - `int getRawBits(void) const;` fonksiyonu - sabit noktalı değerin ham değerini döndürür
   - `void setRawBits(int const raw);` fonksiyonu - sabit noktalı sayının ham değerini ayarlar
 
-## Exercise 01: Daha Kullanışlı Bir Sabit Noktalı Sayı Sınıfına Doğru
+## Exercise 01: Towards a More Useful Fixed-Point Number Class
 
 Bu alıştırmada, Exercise 00'daki sınıfınızı daha işlevsel hale getirmeniz gerekiyor.
 
@@ -47,7 +47,7 @@ Bu alıştırmada, Exercise 00'daki sınıfınızı daha işlevsel hale getirmen
 - **Operatör Aşırı Yükleme:**
   - Çıkış akışına sabit noktalı sayının kayan noktalı gösterimini ekleyen ekleme operatörü (`<<`) aşırı yüklemesi
 
-## Exercise 02: Şimdi Konuşuyoruz
+## Exercise 02: Now We're Talking
 
 Bu alıştırmada, sabit noktalı sayı sınıfınızı çeşitli operatörlerle genişletmeniz gerekiyor.
 
