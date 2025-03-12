@@ -44,12 +44,13 @@ Bu bölümde, polymorphism ile birlikte deep copy ve dinamik bellek yönetimi el
 
 Bu bölümde, soyut sınıfların kullanımı ve saf sanal fonksiyonlar ele alınmaktadır.
 
+![Virtual Table](https://github.com/menasy/Project_icons/blob/main/Cpp_ModuleImages/VirtualTable.png)
+![Virtual Table 2](https://github.com/menasy/Project_icons/blob/main/Cpp_ModuleImages/VirtualTable2.png)
 #### Uygulanması Gerekenler
 
 - `Animal` sınıfı soyut hale getirilmeli ve doğrudan örneklenmesi engellenmelidir.
 - Sınıf ismi `Animal` yerine `AAnimal` olarak değiştirilebilir.
 
-![Virtual Table](https://github.com/menasy/Project_icons/blob/main/Cpp_ModuleImages/VirtualTable.png)
 
 ### Exercise 03: Interface Kullanımı ve Özet
 
@@ -80,7 +81,6 @@ Bu bölümde, C++'ta interface'lerin nasıl oluşturulacağı ve kullanılacağ�
   };
   ```
 
-![Virtual Table 2](https://github.com/menasy/Project_icons/blob/main/Cpp_ModuleImages/VirtualTable2.png)
 
 ## Özet
 
