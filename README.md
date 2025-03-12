@@ -138,3 +138,11 @@ Bu modül, C++ Standard Template Library (STL) kullanımını öğrenmeye ve **f
 ## Projenin Amacı
 
 Bu proje, 42 okul müfredatı kapsamında C++ programlama dilinin temel ve ileri seviye özelliklerini adım adım öğrenmeyi amaçlamaktadır. Nesne yönelimli programlama paradigmasından başlayarak, şablonlar, STL ve modern C++ tekniklerine kadar geniş bir yelpazede bilgi ve deneyim kazandırmıştır.
+
+## Genel Kaynaklar
+
+- **GeeksforGeeks:** [https://www.geeksforgeeks.org](https://www.geeksforgeeks.org)
+- **LearnCPP:** [https://www.learncpp.com](https://www.learncpp.com)
+- **C++ Yazılımagonulver Kanalı (OOP Playlist):** [YouTube](https://youtube.com/playlist?list=PLfs1gAT4S8yInGkovwucGKCjcxP-Odf7Q&si=pMLo4jxP80PtsbXA)
+- **C++ Yazılımbilimi Kanalı (C++ Playlist):** [YouTube](https://youtube.com/playlist?list=PLfs1gAT4S8yInGkovwucGKCjcxP-Odf7Q&si=pMLo4jxP80PtsbXA)
+
