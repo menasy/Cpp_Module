@@ -50,9 +50,9 @@ Bu modülde aşağıdaki konular ele alınmıştır:
 <a name="cpp02"></a>
 ### [CPP02](https://github.com/menasy/Cpp_Module/tree/main/Cpp02)
 
-Bu modül, C++'da **Ad-hoc Polymorphism (Ad-hoc Polimorfizm), Operator Overloading (Operatör Aşırı Yükleme) ve Orthodox Canonical Class Form (Ortodoks Kanonik Sınıf Formu)** kavramlarını anlamaya yardımcı olmak için tasarlanmıştır. Modül kapsamında aşağıdaki konular ele alınmıştır:
+Bu modül, C++'da **Polymorphism (Polimorfizm), Operator Overloading (Operatör Aşırı Yükleme) ve Orthodox Canonical Class Form (Ortodoks Kanonik Sınıf Formu)** kavramlarını anlamaya yardımcı olmak için tasarlanmıştır. Modül kapsamında aşağıdaki konular ele alınmıştır:
 
-- **Ad-hoc Polymorphism (Ad-hoc Polimorfizm)**
+- **Ad-hoc Polymorphism (Polimorfizm)**
 - **Operator Overloading (Operatör Aşırı Yükleme)**
 - **Orthodox Canonical Class Form (Ortodoks Kanonik Sınıf Formu)**
 - **Fixed-point Numbers Application (Sabit Noktalı Sayılar Uygulaması)**
