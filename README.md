@@ -118,7 +118,7 @@ Aşağıdaki konular ele alınmıştır:
 
 Bu modül, C++'ta **Type Conversions (Tür Dönüşümleri), Casting Operators (Cast Operatörleri) ve Run-Time Type Information (RTTI - Dinamik Tür Tanıma)** konularını içermektedir.
 
-C++ tür dönüşümleri ve cast operatörleri hakkında kapsamlı bilgi için Medium yazım: [C++ C++ Type Casting - Tip Dönüşümleri - CPP Module 06](https://medium.com/@menasy/c-tip-dönüşümleri-cpp-module-06-efa72bbecd68)
+C++ tür dönüşümleri ve cast operatörleri hakkında kapsamlı bilgi için Medium yazım: [C++ Type Casting - Tip Dönüşümleri - CPP Module 06](https://medium.com/@menasy/c-tip-dönüşümleri-cpp-module-06-efa72bbecd68)
 
 Aşağıdaki konular ele alınmıştır:
 
