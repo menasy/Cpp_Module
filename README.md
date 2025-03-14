@@ -102,7 +102,7 @@ Aşağıdaki konular ele alınmıştır:
 
 Bu modül, C++ programlama dilindeki **Exception Handling (İstisna İşleme)** mekanizmalarını öğretmeye odaklanmaktadır. 
 
-C++ exception handling kavramları ve uygulamaları hakkında detaylı bilgi için Medium yazım: [C++ Exception İşleme - 42 CPP Modülleri CPP Module 05](https://medium.com/@menasy/c-exception-i̇şleme-cpp-module-05-667fe3f9a857)
+C++ exception handling kavramları ve uygulamaları hakkında detaylı bilgi için Medium yazım: [C++ Exception İşleme - CPP Module 05](https://medium.com/@menasy/c-exception-i̇şleme-42-cpp-modülleri-cpp-module-05-667fe3f9a857)
 
 Aşağıdaki konular ele alınmıştır:
 
